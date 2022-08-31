@@ -1,6 +1,6 @@
 module github.com/pulumiverse/pulumi-gandi/provider
 
-go 1.18
+go 1.17
 
 replace (
 	github.com/go-gandi/terraform-provider-gandi => github.com/go-gandi/terraform-provider-gandi v1.1.2-0.20220802081346-bc1492555f14
