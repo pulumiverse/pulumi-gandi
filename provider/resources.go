@@ -124,21 +124,21 @@ func Provider() tfbridge.ProviderInfo {
 		},
 		DataSources: map[string]*tfbridge.DataSourceInfo{
 			"gandi_domain": {
-				Tok: tfbridge.MakeDataSource(mainPkg, "domains", "Domain"),
+				Tok: tfbridge.MakeDataSource(mainPkg, "domains", "getDomain"),
 			},
 			"gandi_glue_record": {
-				Tok: tfbridge.MakeDataSource(mainPkg, "domains", "GlueRecord"),
+				Tok: tfbridge.MakeDataSource(mainPkg, "domains", "getGlueRecord"),
 			},
 
 			"gandi_livedns_domain": {
-				Tok: tfbridge.MakeDataSource(mainPkg, "livedns", "Domain"),
+				Tok: tfbridge.MakeDataSource(mainPkg, "livedns", "getDomain"),
 			},
 			"gandi_livedns_domain_ns": {
-				Tok: tfbridge.MakeDataSource(mainPkg, "livedns", "DomainNameserver"),
+				Tok: tfbridge.MakeDataSource(mainPkg, "livedns", "getDomainNameserver"),
 			},
 
 			"gandi_mailbox": {
-				Tok: tfbridge.MakeDataSource(mainPkg, "email", "Mailbox"),
+				Tok: tfbridge.MakeDataSource(mainPkg, "email", "getMailbox"),
 			},
 		},
 		JavaScript: &tfbridge.JavaScriptInfo{

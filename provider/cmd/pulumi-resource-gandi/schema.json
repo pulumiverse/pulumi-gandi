@@ -1542,9 +1542,9 @@
         }
     },
     "functions": {
-        "gandi:domains/domain:Domain": {
+        "gandi:domains/getDomain:getDomain": {
             "inputs": {
-                "description": "A collection of arguments for invoking Domain.\n",
+                "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
                         "type": "string",
@@ -1557,7 +1557,7 @@
                 ]
             },
             "outputs": {
-                "description": "A collection of values returned by Domain.\n",
+                "description": "A collection of values returned by getDomain.\n",
                 "properties": {
                     "id": {
                         "type": "string",
@@ -1583,9 +1583,9 @@
                 ]
             }
         },
-        "gandi:domains/glueRecord:GlueRecord": {
+        "gandi:domains/getGlueRecord:getGlueRecord": {
             "inputs": {
-                "description": "A collection of arguments for invoking GlueRecord.\n",
+                "description": "A collection of arguments for invoking getGlueRecord.\n",
                 "properties": {
                     "name": {
                         "type": "string",
@@ -1603,7 +1603,7 @@
                 ]
             },
             "outputs": {
-                "description": "A collection of values returned by GlueRecord.\n",
+                "description": "A collection of values returned by getGlueRecord.\n",
                 "properties": {
                     "id": {
                         "type": "string",
@@ -1634,9 +1634,9 @@
                 ]
             }
         },
-        "gandi:email/mailbox:Mailbox": {
+        "gandi:email/getMailbox:getMailbox": {
             "inputs": {
-                "description": "A collection of arguments for invoking Mailbox.\n",
+                "description": "A collection of arguments for invoking getMailbox.\n",
                 "properties": {
                     "domain": {
                         "type": "string",
@@ -1654,7 +1654,7 @@
                 ]
             },
             "outputs": {
-                "description": "A collection of values returned by Mailbox.\n",
+                "description": "A collection of values returned by getMailbox.\n",
                 "properties": {
                     "domain": {
                         "type": "string",
@@ -1677,9 +1677,9 @@
                 ]
             }
         },
-        "gandi:livedns/domain:Domain": {
+        "gandi:livedns/getDomain:getDomain": {
             "inputs": {
-                "description": "A collection of arguments for invoking Domain.\n",
+                "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
                         "type": "string",
@@ -1692,7 +1692,7 @@
                 ]
             },
             "outputs": {
-                "description": "A collection of values returned by Domain.\n",
+                "description": "A collection of values returned by getDomain.\n",
                 "properties": {
                     "id": {
                         "type": "string",
@@ -1710,9 +1710,9 @@
                 ]
             }
         },
-        "gandi:livedns/domainNameserver:DomainNameserver": {
+        "gandi:livedns/getDomainNameserver:getDomainNameserver": {
             "inputs": {
-                "description": "A collection of arguments for invoking DomainNameserver.\n",
+                "description": "A collection of arguments for invoking getDomainNameserver.\n",
                 "properties": {
                     "name": {
                         "type": "string",
@@ -1725,7 +1725,7 @@
                 ]
             },
             "outputs": {
-                "description": "A collection of values returned by DomainNameserver.\n",
+                "description": "A collection of values returned by getDomainNameserver.\n",
                 "properties": {
                     "id": {
                         "type": "string",
