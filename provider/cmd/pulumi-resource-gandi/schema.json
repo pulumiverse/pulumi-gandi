@@ -61,7 +61,12 @@
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key\n"
+                "description": "A Gandi API key\n",
+                "defaultInfo": {
+                    "environment": [
+                        "GANDI_KEY"
+                    ]
+                }
             },
             "sharingId": {
                 "type": "string",
@@ -678,9 +683,6 @@
                 "description": "The Gandi API URL\n"
             }
         },
-        "required": [
-            "key"
-        ],
         "inputProperties": {
             "dryRun": {
                 "type": "boolean",
@@ -688,7 +690,12 @@
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key\n"
+                "description": "A Gandi API key\n",
+                "defaultInfo": {
+                    "environment": [
+                        "GANDI_KEY"
+                    ]
+                }
             },
             "sharingId": {
                 "type": "string",
@@ -698,10 +705,7 @@
                 "type": "string",
                 "description": "The Gandi API URL\n"
             }
-        },
-        "requiredInputs": [
-            "key"
-        ]
+        }
     },
     "resources": {
         "gandi:domains/dNSSecKey:DNSSecKey": {
@@ -989,32 +993,42 @@
         },
         "gandi:domains/nameservers:Nameservers": {
             "properties": {
-                "Hosts": {
+                "domain": {
+                    "type": "string",
+                    "description": "The FQDN of the domain\n"
+                },
+                "servers": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "A list of nameservers for the domain\n"
-                },
-                "domain": {
-                    "type": "string",
-                    "description": "The FQDN of the domain\n"
+                    "description": "A list of nameservers for the domain\n",
+                    "language": {
+                        "csharp": {
+                            "name": "Servers"
+                        }
+                    }
                 }
             },
             "required": [
                 "domain"
             ],
             "inputProperties": {
-                "Hosts": {
+                "domain": {
+                    "type": "string",
+                    "description": "The FQDN of the domain\n"
+                },
+                "servers": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
-                    "description": "A list of nameservers for the domain\n"
-                },
-                "domain": {
-                    "type": "string",
-                    "description": "The FQDN of the domain\n"
+                    "description": "A list of nameservers for the domain\n",
+                    "language": {
+                        "csharp": {
+                            "name": "Servers"
+                        }
+                    }
                 }
             },
             "requiredInputs": [
@@ -1023,16 +1037,21 @@
             "stateInputs": {
                 "description": "Input properties used for looking up and filtering Nameservers resources.\n",
                 "properties": {
-                    "Hosts": {
+                    "domain": {
+                        "type": "string",
+                        "description": "The FQDN of the domain\n"
+                    },
+                    "servers": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
-                        "description": "A list of nameservers for the domain\n"
-                    },
-                    "domain": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "description": "A list of nameservers for the domain\n",
+                        "language": {
+                            "csharp": {
+                                "name": "Servers"
+                            }
+                        }
                     }
                 },
                 "type": "object"

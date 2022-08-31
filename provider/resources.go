@@ -76,15 +76,12 @@ func Provider() tfbridge.ProviderInfo {
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg: "go-gandi",
-		Config:    map[string]*tfbridge.SchemaInfo{
-			// Add any required configuration here, or remove the example below if
-			// no additional points are required.
-			// "region": {
-			// 	Type: tfbridge.MakeType("region", "Region"),
-			// 	Default: &tfbridge.DefaultInfo{
-			// 		EnvVars: []string{"AWS_REGION", "AWS_DEFAULT_REGION"},
-			// 	},
-			// },
+		Config: map[string]*tfbridge.SchemaInfo{
+			"key": {
+				Default: &tfbridge.DefaultInfo{
+					EnvVars: []string{"GANDI_KEY"},
+				},
+			},
 		},
 		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
@@ -95,7 +92,8 @@ func Provider() tfbridge.ProviderInfo {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Nameservers"),
 				Fields: map[string]*tfbridge.SchemaInfo{
 					"nameservers": &tfbridge.SchemaInfo{
-						Name: "Hosts",
+						Name:       "servers",
+						CSharpName: "Servers",
 					},
 				},
 			},
