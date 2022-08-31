@@ -18,7 +18,12 @@ $ npm install @pulumiverse/gandi
 $ yarn add @pulumiverse/gandi
 ```
 
-### Python, Go & .NET
+### Python
+
+```bash
+$ pip install pulumiverse_gandi
+```
+### Go & .NET
 
 > *TBA*
 
