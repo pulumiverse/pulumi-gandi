@@ -18,12 +18,12 @@ import (
 	"fmt"
 	"path/filepath"
 
+	"github.com/go-gandi/terraform-provider-gandi/gandi"
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumiverse/pulumi-gandi/provider/pkg/version"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	"github.com/go-gandi/terraform-provider-gandi/gandi"
+	"github.com/pulumiverse/pulumi-gandi/provider/pkg/version"
 )
 
 const (
@@ -87,12 +87,17 @@ func Provider() tfbridge.ProviderInfo {
 			// },
 		},
 		PreConfigureCallback: preConfigureCallback,
-		Resources:            map[string]*tfbridge.ResourceInfo{
+		Resources: map[string]*tfbridge.ResourceInfo{
 			"gandi_domain": {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Domain"),
 			},
 			"gandi_nameservers": {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Nameservers"),
+				Fields: map[string]*tfbridge.SchemaInfo{
+					"nameservers": &tfbridge.SchemaInfo{
+						Name: "Hosts",
+					},
+				},
 			},
 			"gandi_dnssec_key": {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "DNSSecKey"),

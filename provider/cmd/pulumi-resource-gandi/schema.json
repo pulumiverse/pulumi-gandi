@@ -988,32 +988,32 @@
         },
         "gandi:domains/nameservers:Nameservers": {
             "properties": {
-                "domain": {
-                    "type": "string",
-                    "description": "The FQDN of the domain\n"
-                },
-                "nameservers": {
+                "Hosts": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
                     "description": "A list of nameservers for the domain\n"
+                },
+                "domain": {
+                    "type": "string",
+                    "description": "The FQDN of the domain\n"
                 }
             },
             "required": [
                 "domain"
             ],
             "inputProperties": {
-                "domain": {
-                    "type": "string",
-                    "description": "The FQDN of the domain\n"
-                },
-                "nameservers": {
+                "Hosts": {
                     "type": "array",
                     "items": {
                         "type": "string"
                     },
                     "description": "A list of nameservers for the domain\n"
+                },
+                "domain": {
+                    "type": "string",
+                    "description": "The FQDN of the domain\n"
                 }
             },
             "requiredInputs": [
@@ -1022,16 +1022,16 @@
             "stateInputs": {
                 "description": "Input properties used for looking up and filtering Nameservers resources.\n",
                 "properties": {
-                    "domain": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
-                    },
-                    "nameservers": {
+                    "Hosts": {
                         "type": "array",
                         "items": {
                             "type": "string"
                         },
                         "description": "A list of nameservers for the domain\n"
+                    },
+                    "domain": {
+                        "type": "string",
+                        "description": "The FQDN of the domain\n"
                     }
                 },
                 "type": "object"
