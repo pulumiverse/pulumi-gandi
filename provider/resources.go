@@ -92,7 +92,6 @@ func Provider() tfbridge.ProviderInfo {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Nameservers"),
 				Fields: map[string]*tfbridge.SchemaInfo{
 					"nameservers": &tfbridge.SchemaInfo{
-						Name:       "servers",
 						CSharpName: "Servers",
 					},
 				},
