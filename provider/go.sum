@@ -320,10 +320,10 @@ github.com/gin-gonic/gin v1.6.3/go.mod h1:75u5sXoLsGZoRN5Sgbi1eraJ4GU3++wFwWzhwv
 github.com/gliderlabs/ssh v0.2.2 h1:6zsha5zo/TWhRhwqCD3+EarCAgZ2yN28ipRnGPnwkI0=
 github.com/gliderlabs/ssh v0.2.2/go.mod h1:U7qILu1NlMHj9FlMhZLlkCdDnU1DBEAqr0aevW3Awn0=
 github.com/go-asn1-ber/asn1-ber v1.3.1/go.mod h1:hEBeB/ic+5LoWskz+yKT7vGhhPYkProFKoKdwZRWMe0=
-github.com/go-gandi/go-gandi v0.4.0 h1:iFVD+x3nJrI611fYvVMk6TKOlUOND/bKnvdQxuZKPSI=
-github.com/go-gandi/go-gandi v0.4.0/go.mod h1:9NoYyfWCjFosClPiWjkbbRK5UViaZ4ctpT8/pKSSFlw=
-github.com/go-gandi/terraform-provider-gandi v1.1.2-0.20220802081346-bc1492555f14 h1:71VOktEszwbpb9cOvot48STZNKjO+PToiIFRC60Q6AA=
-github.com/go-gandi/terraform-provider-gandi v1.1.2-0.20220802081346-bc1492555f14/go.mod h1:3J3VthMGh6rRSLdOW5PvWRMu8ke5jdkp+6tD0FY9SVc=
+github.com/go-gandi/go-gandi v0.5.0 h1:QpE/O2LHO7w5XTgAB0HaNy+hLS1oEv/j0UymYYu4D0w=
+github.com/go-gandi/go-gandi v0.5.0/go.mod h1:9NoYyfWCjFosClPiWjkbbRK5UViaZ4ctpT8/pKSSFlw=
+github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0 h1:H6z9FZXySHpF+Dj5NfXrT8lCu5L/cH/+qRgLtyu991A=
+github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0/go.mod h1:vBoPKv7LLiP9Df3YcSlaMLs72gRGmoU8JYcevGXFF/o=
 github.com/go-git/gcfg v1.5.0 h1:Q5ViNfGF8zFgyJWPqYwA7qGFoMTEiBmdlkcfRmpIMa4=
 github.com/go-git/gcfg v1.5.0/go.mod h1:5m20vg6GwYabIxaOonVkTdrILxQMpEShl1xiMF4ua+E=
 github.com/go-git/go-billy/v5 v5.2.0/go.mod h1:pmpqyWchKfYfrkb/UVH4otLvyi/5gJlGI4Hb3ZqZ3W0=

@@ -80,8 +80,8 @@ cleanup:: # cleans up the temporary directory
 
 help::
 	@grep '^[^.#]\+:\s\+.*#' Makefile | \
- 	sed "s/\(.\+\):\s*\(.*\) #\s*\(.*\)/`printf "\033[93m"`\1`printf "\033[0m"`	\3 [\2]/" | \
- 	expand -t20
+	sed "s/\(.\+\):\s*\(.*\) #\s*\(.*\)/`printf "\033[93m"`\1`printf "\033[0m"`	\3 [\2]/" | \
+	expand -t20
 
 clean::
 	rm -rf sdk/{dotnet,nodejs,go,python}

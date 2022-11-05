@@ -2,13 +2,10 @@ module github.com/pulumiverse/pulumi-gandi/provider
 
 go 1.17
 
-replace (
-	github.com/go-gandi/terraform-provider-gandi => github.com/go-gandi/terraform-provider-gandi v1.1.2-0.20220802081346-bc1492555f14
-	github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20220824175045-450992f2f5b9
-)
+replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20220824175045-450992f2f5b9
 
 require (
-	github.com/go-gandi/terraform-provider-gandi v0.0.0-00010101000000-000000000000
+	github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.28.1
 	github.com/pulumi/pulumi/sdk/v3 v3.38.0
 )
@@ -70,7 +67,7 @@ require (
 	github.com/ettle/strcase v0.1.1 // indirect
 	github.com/fatih/color v1.13.0 // indirect
 	github.com/gedex/inflector v0.0.0-20170307190818-16278e9db813 // indirect
-	github.com/go-gandi/go-gandi v0.4.0 // indirect
+	github.com/go-gandi/go-gandi v0.5.0 // indirect
 	github.com/go-git/gcfg v1.5.0 // indirect
 	github.com/go-git/go-billy/v5 v5.3.1 // indirect
 	github.com/go-git/go-git/v5 v5.4.2 // indirect
