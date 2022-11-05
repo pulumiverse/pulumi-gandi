@@ -816,6 +816,13 @@
                 "owner": {
                     "$ref": "#/types/gandi:domains/DomainOwner:DomainOwner"
                 },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of tags attached to the domain\n"
+                },
                 "tech": {
                     "$ref": "#/types/gandi:domains/DomainTech:DomainTech"
                 }
@@ -853,6 +860,13 @@
                 "owner": {
                     "$ref": "#/types/gandi:domains/DomainOwner:DomainOwner"
                 },
+                "tags": {
+                    "type": "array",
+                    "items": {
+                        "type": "string"
+                    },
+                    "description": "A list of tags attached to the domain\n"
+                },
                 "tech": {
                     "$ref": "#/types/gandi:domains/DomainTech:DomainTech"
                 }
@@ -887,6 +901,13 @@
                     },
                     "owner": {
                         "$ref": "#/types/gandi:domains/DomainOwner:DomainOwner"
+                    },
+                    "tags": {
+                        "type": "array",
+                        "items": {
+                            "type": "string"
+                        },
+                        "description": "A list of tags attached to the domain\n"
                     },
                     "tech": {
                         "$ref": "#/types/gandi:domains/DomainTech:DomainTech"
@@ -998,7 +1019,7 @@
                     "type": "string",
                     "description": "The FQDN of the domain\n"
                 },
-                "servers": {
+                "nameservers": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1019,7 +1040,7 @@
                     "type": "string",
                     "description": "The FQDN of the domain\n"
                 },
-                "servers": {
+                "nameservers": {
                     "type": "array",
                     "items": {
                         "type": "string"
@@ -1042,7 +1063,7 @@
                         "type": "string",
                         "description": "The FQDN of the domain\n"
                     },
-                    "servers": {
+                    "nameservers": {
                         "type": "array",
                         "items": {
                             "type": "string"
