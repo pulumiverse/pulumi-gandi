@@ -11,8 +11,16 @@ jobs:
     uses: pulumiverse/infra/.github/workflows/provider-prerequisites.yaml@main
     with:
       provider: gandi
+      dotnetversion: "3.1.301"
+      goversion: "1.19"
+      nodeversion: "16.x"
+      pythonversion: "3.9"
   build:
     needs: prerequisites
     uses: pulumiverse/infra/.github/workflows/provider-build-sdk.yaml@main
     with:
       provider: gandi
+      dotnetversion: "3.1.301"
+      goversion: "1.19"
+      nodeversion: "16.x"
+      pythonversion: "3.9"

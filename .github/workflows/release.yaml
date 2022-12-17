@@ -128,7 +128,7 @@ jobs:
         dotnetversion:
           - 3.1.301
         goversion:
-          - 1.18.x
+          - 1.19.x
         language:
           - nodejs
           - go
@@ -137,6 +137,6 @@ jobs:
           # Removing until I fix the SDK generation
           # - dotnet
         nodeversion:
-          - 14.x
+          - 16.x
         pythonversion:
           - "3.9"
