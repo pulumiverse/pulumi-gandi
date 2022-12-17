@@ -1,4 +1,4 @@
-# Terraform Bridge Provider Boilerplate
+# Gandi
 
 This repository contains boilerplate code for building a new Pulumi provider which wraps an existing Terraform provider.  
 
