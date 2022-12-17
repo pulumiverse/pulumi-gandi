@@ -87,7 +87,6 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "description": "City for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -96,7 +95,6 @@
                 },
                 "country": {
                     "type": "string",
-                    "description": "The two letter country code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -105,7 +103,6 @@
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact data in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -114,7 +111,6 @@
                 },
                 "email": {
                     "type": "string",
-                    "description": "Contact email address\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -126,7 +122,6 @@
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "description": "Extra parameters, needed for some jurisdictions\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -135,7 +130,6 @@
                 },
                 "familyName": {
                     "type": "string",
-                    "description": "Family name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -144,7 +138,6 @@
                 },
                 "givenName": {
                     "type": "string",
-                    "description": "Given name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -153,7 +146,6 @@
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact email in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -162,7 +154,6 @@
                 },
                 "organisation": {
                     "type": "string",
-                    "description": "The legal name of the organisation. Required for types other than person\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -171,7 +162,6 @@
                 },
                 "phone": {
                     "type": "string",
-                    "description": "Phone number for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -180,7 +170,6 @@
                 },
                 "state": {
                     "type": "string",
-                    "description": "The state code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -189,7 +178,6 @@
                 },
                 "streetAddr": {
                     "type": "string",
-                    "description": "Street Address of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -198,7 +186,6 @@
                 },
                 "type": {
                     "type": "string",
-                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -207,7 +194,6 @@
                 },
                 "zip": {
                     "type": "string",
-                    "description": "Postal Code/Zipcode of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -232,7 +218,6 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "description": "City for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -241,7 +226,6 @@
                 },
                 "country": {
                     "type": "string",
-                    "description": "The two letter country code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -250,7 +234,6 @@
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact data in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -259,7 +242,6 @@
                 },
                 "email": {
                     "type": "string",
-                    "description": "Contact email address\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -271,7 +253,6 @@
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "description": "Extra parameters, needed for some jurisdictions\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -280,7 +261,6 @@
                 },
                 "familyName": {
                     "type": "string",
-                    "description": "Family name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -289,7 +269,6 @@
                 },
                 "givenName": {
                     "type": "string",
-                    "description": "Given name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -298,7 +277,6 @@
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact email in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -307,7 +285,6 @@
                 },
                 "organisation": {
                     "type": "string",
-                    "description": "The legal name of the organisation. Required for types other than person\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -316,7 +293,6 @@
                 },
                 "phone": {
                     "type": "string",
-                    "description": "Phone number for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -325,7 +301,6 @@
                 },
                 "state": {
                     "type": "string",
-                    "description": "The state code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -334,7 +309,6 @@
                 },
                 "streetAddr": {
                     "type": "string",
-                    "description": "Street Address of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -343,7 +317,6 @@
                 },
                 "type": {
                     "type": "string",
-                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -352,7 +325,6 @@
                 },
                 "zip": {
                     "type": "string",
-                    "description": "Postal Code/Zipcode of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -377,7 +349,6 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "description": "City for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -386,7 +357,6 @@
                 },
                 "country": {
                     "type": "string",
-                    "description": "The two letter country code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -395,7 +365,6 @@
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact data in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -404,7 +373,6 @@
                 },
                 "email": {
                     "type": "string",
-                    "description": "Contact email address\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -416,7 +384,6 @@
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "description": "Extra parameters, needed for some jurisdictions\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -425,7 +392,6 @@
                 },
                 "familyName": {
                     "type": "string",
-                    "description": "Family name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -434,7 +400,6 @@
                 },
                 "givenName": {
                     "type": "string",
-                    "description": "Given name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -443,7 +408,6 @@
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact email in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -452,7 +416,6 @@
                 },
                 "organisation": {
                     "type": "string",
-                    "description": "The legal name of the organisation. Required for types other than person\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -461,7 +424,6 @@
                 },
                 "phone": {
                     "type": "string",
-                    "description": "Phone number for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -470,7 +432,6 @@
                 },
                 "state": {
                     "type": "string",
-                    "description": "The state code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -479,7 +440,6 @@
                 },
                 "streetAddr": {
                     "type": "string",
-                    "description": "Street Address of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -488,7 +448,6 @@
                 },
                 "type": {
                     "type": "string",
-                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -497,7 +456,6 @@
                 },
                 "zip": {
                     "type": "string",
-                    "description": "Postal Code/Zipcode of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -522,7 +480,6 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "description": "City for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -531,7 +488,6 @@
                 },
                 "country": {
                     "type": "string",
-                    "description": "The two letter country code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -540,7 +496,6 @@
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact data in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -549,7 +504,6 @@
                 },
                 "email": {
                     "type": "string",
-                    "description": "Contact email address\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -561,7 +515,6 @@
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "description": "Extra parameters, needed for some jurisdictions\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -570,7 +523,6 @@
                 },
                 "familyName": {
                     "type": "string",
-                    "description": "Family name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -579,7 +531,6 @@
                 },
                 "givenName": {
                     "type": "string",
-                    "description": "Given name of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -588,7 +539,6 @@
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "description": "Whether or not to obfuscate contact email in WHOIS\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -597,7 +547,6 @@
                 },
                 "organisation": {
                     "type": "string",
-                    "description": "The legal name of the organisation. Required for types other than person\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -606,7 +555,6 @@
                 },
                 "phone": {
                     "type": "string",
-                    "description": "Phone number for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -615,7 +563,6 @@
                 },
                 "state": {
                     "type": "string",
-                    "description": "The state code for the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -624,7 +571,6 @@
                 },
                 "streetAddr": {
                     "type": "string",
-                    "description": "Street Address of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -633,7 +579,6 @@
                 },
                 "type": {
                     "type": "string",
-                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -642,7 +587,6 @@
                 },
                 "zip": {
                     "type": "string",
-                    "description": "Postal Code/Zipcode of the contact\n",
                     "language": {
                         "python": {
                             "mapCase": false
@@ -1589,8 +1533,7 @@
                 "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1606,15 +1549,13 @@
                         "description": "The provider-assigned unique ID for this managed resource.\n"
                     },
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     },
                     "nameservers": {
                         "type": "array",
                         "items": {
                             "type": "string"
-                        },
-                        "description": "A list of nameservers for the domain\n"
+                        }
                     }
                 },
                 "type": "object",
@@ -1630,12 +1571,10 @@
                 "description": "A collection of arguments for invoking getGlueRecord.\n",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "description": "Host name of the glue record\n"
+                        "type": "string"
                     },
                     "zone": {
-                        "type": "string",
-                        "description": "Domain name\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1655,16 +1594,13 @@
                         "type": "array",
                         "items": {
                             "type": "string"
-                        },
-                        "description": "A list of the ip addresses provided for the glue record\n"
+                        }
                     },
                     "name": {
-                        "type": "string",
-                        "description": "Host name of the glue record\n"
+                        "type": "string"
                     },
                     "zone": {
-                        "type": "string",
-                        "description": "Domain name\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1681,12 +1617,10 @@
                 "description": "A collection of arguments for invoking getMailbox.\n",
                 "properties": {
                     "domain": {
-                        "type": "string",
-                        "description": "Domain name\n"
+                        "type": "string"
                     },
                     "mailboxId": {
-                        "type": "string",
-                        "description": "Mailbox ID\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1699,16 +1633,14 @@
                 "description": "A collection of values returned by getMailbox.\n",
                 "properties": {
                     "domain": {
-                        "type": "string",
-                        "description": "Domain name\n"
+                        "type": "string"
                     },
                     "id": {
                         "type": "string",
                         "description": "The provider-assigned unique ID for this managed resource.\n"
                     },
                     "mailboxId": {
-                        "type": "string",
-                        "description": "Mailbox ID\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1724,8 +1656,7 @@
                 "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1741,8 +1672,7 @@
                         "description": "The provider-assigned unique ID for this managed resource.\n"
                     },
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1757,8 +1687,7 @@
                 "description": "A collection of arguments for invoking getDomainNameserver.\n",
                 "properties": {
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     }
                 },
                 "type": "object",
@@ -1774,15 +1703,13 @@
                         "description": "The provider-assigned unique ID for this managed resource.\n"
                     },
                     "name": {
-                        "type": "string",
-                        "description": "The FQDN of the domain\n"
+                        "type": "string"
                     },
                     "nameservers": {
                         "type": "array",
                         "items": {
                             "type": "string"
-                        },
-                        "description": "A list of nameservers for the domain\n"
+                        }
                     }
                 },
                 "type": "object",
