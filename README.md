@@ -1,6 +1,8 @@
 # Gandi
 
-This repository contains boilerplate code for building a new Pulumi provider which wraps an existing Terraform provider.  
+**NOTE** this is a community package in [need of new maintainers](https://github.com/pulumiverse/pulumi-gandi/issues/5).
+
+This repository contains boilerplate code for building a new Pulumi provider which wraps an existing Terraform provider.
 
 ### Background
 This repository is part of the [guide for authoring and publishing a Pulumi Package](https://www.pulumi.com/docs/guides/pulumi-packages/how-to-author).

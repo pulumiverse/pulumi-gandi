@@ -6,6 +6,8 @@ layout: overview
 
 The Gandi provider for Pulumi can be used to provision any of the resources available in [Gandi](https://gandi.net/).
 
+**NOTE** this is a community package in [need of new maintainers](https://github.com/pulumiverse/pulumi-gandi/issues/5).
+
 ## Example
 
 {{< chooser language "typescript" >}}
