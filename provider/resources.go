@@ -18,6 +18,7 @@ import (
 	"fmt"
 	"path/filepath"
 
+	// Allow embedding bridge-metadata.json in the provider.
 	_ "embed"
 
 	"github.com/go-gandi/terraform-provider-gandi/v2/gandi"
