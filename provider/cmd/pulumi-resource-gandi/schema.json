@@ -19,19 +19,20 @@
     },
     "language": {
         "csharp": {
-            "compatibility": "tfbridge20",
-            "namespaces": null,
             "packageReferences": {
                 "Pulumi": "3.*"
-            }
+            },
+            "compatibility": "tfbridge20"
         },
         "go": {
-            "generateExtraInputTypes": true,
+            "importBasePath": "github.com/pulumiverse/pulumi-gandi/sdk/v2/go/gandi",
             "generateResourceContainerTypes": true,
-            "importBasePath": "github.com/pulumiverse/pulumi-gandi/sdk/go/gandi"
+            "generateExtraInputTypes": true
         },
         "nodejs": {
-            "compatibility": "tfbridge20",
+            "packageName": "@pulumiverse/gandi",
+            "packageDescription": "A Pulumi package for creating and managing gandi cloud resources.",
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/go-gandi/terraform-provider-gandi)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-gandi` repo](https://github.com/pulumiverse/pulumi-gandi/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-gandi` repo](https://github.com/go-gandi/terraform-provider-gandi/issues).",
             "dependencies": {
                 "@pulumi/pulumi": "^3.0.0"
             },
@@ -39,43 +40,42 @@
                 "@types/mime": "^2.0.0",
                 "@types/node": "^10.0.0"
             },
-            "disableUnionOutputTypes": true,
-            "packageDescription": "A Pulumi package for creating and managing gandi cloud resources.",
-            "packageName": "@pulumiverse/gandi",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/go-gandi/terraform-provider-gandi)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-gandi` repo](https://github.com/pulumiverse/pulumi-gandi/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-gandi` repo](https://github.com/go-gandi/terraform-provider-gandi/issues).",
-            "typescriptVersion": ""
+            "compatibility": "tfbridge20",
+            "disableUnionOutputTypes": true
         },
         "python": {
-            "compatibility": "tfbridge20",
             "packageName": "pulumiverse_gandi",
-            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/go-gandi/terraform-provider-gandi)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-gandi` repo](https://github.com/pulumiverse/pulumi-gandi/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-gandi` repo](https://github.com/go-gandi/terraform-provider-gandi/issues).",
             "requires": {
                 "pulumi": "\u003e=3.0.0,\u003c4.0.0"
-            }
+            },
+            "readme": "\u003e This provider is a derived work of the [Terraform Provider](https://github.com/go-gandi/terraform-provider-gandi)\n\u003e distributed under [MPL 2.0](https://www.mozilla.org/en-US/MPL/2.0/). If you encounter a bug or missing feature,\n\u003e first check the [`pulumi-gandi` repo](https://github.com/pulumiverse/pulumi-gandi/issues); however, if that doesn't turn up anything,\n\u003e please consult the source [`terraform-provider-gandi` repo](https://github.com/go-gandi/terraform-provider-gandi/issues).",
+            "compatibility": "tfbridge20",
+            "pyproject": {}
         }
     },
     "config": {
         "variables": {
             "dryRun": {
                 "type": "boolean",
-                "description": "Prevent the Domain provider from taking certain actions\n"
+                "description": "Prevent the Domain provider from taking certain actions"
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key\n",
+                "description": "A Gandi API key",
                 "defaultInfo": {
                     "environment": [
                         "GANDI_KEY"
                     ]
-                }
+                },
+                "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID\n"
+                "description": "A Gandi Sharing ID"
             },
             "url": {
                 "type": "string",
-                "description": "The Gandi API URL\n"
+                "description": "The Gandi API URL"
             }
         },
         "defaults": [
@@ -87,118 +87,62 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "City for the contact\n"
                 },
                 "country": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The two letter country code for the contact\n"
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact data in WHOIS\n"
                 },
                 "email": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Contact email address\n"
                 },
                 "extraParameters": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Extra parameters, needed for some jurisdictions\n"
                 },
                 "familyName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Family name of the contact\n"
                 },
                 "givenName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Given name of the contact\n"
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact email in WHOIS\n"
                 },
                 "organisation": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The legal name of the organisation. Required for types other than person\n"
                 },
                 "phone": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Phone number for the contact\n"
                 },
                 "state": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The state code for the contact\n"
                 },
                 "streetAddr": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Street Address of the contact\n"
                 },
                 "type": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n"
                 },
                 "zip": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Postal Code/Zipcode of the contact\n"
                 }
             },
             "type": "object",
@@ -218,118 +162,62 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "City for the contact\n"
                 },
                 "country": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The two letter country code for the contact\n"
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact data in WHOIS\n"
                 },
                 "email": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Contact email address\n"
                 },
                 "extraParameters": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Extra parameters, needed for some jurisdictions\n"
                 },
                 "familyName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Family name of the contact\n"
                 },
                 "givenName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Given name of the contact\n"
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact email in WHOIS\n"
                 },
                 "organisation": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The legal name of the organisation. Required for types other than person\n"
                 },
                 "phone": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Phone number for the contact\n"
                 },
                 "state": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The state code for the contact\n"
                 },
                 "streetAddr": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Street Address of the contact\n"
                 },
                 "type": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n"
                 },
                 "zip": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Postal Code/Zipcode of the contact\n"
                 }
             },
             "type": "object",
@@ -349,118 +237,62 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "City for the contact\n"
                 },
                 "country": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The two letter country code for the contact\n"
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact data in WHOIS\n"
                 },
                 "email": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Contact email address\n"
                 },
                 "extraParameters": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Extra parameters, needed for some jurisdictions\n"
                 },
                 "familyName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Family name of the contact\n"
                 },
                 "givenName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Given name of the contact\n"
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact email in WHOIS\n"
                 },
                 "organisation": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The legal name of the organisation. Required for types other than person\n"
                 },
                 "phone": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Phone number for the contact\n"
                 },
                 "state": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The state code for the contact\n"
                 },
                 "streetAddr": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Street Address of the contact\n"
                 },
                 "type": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n"
                 },
                 "zip": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Postal Code/Zipcode of the contact\n"
                 }
             },
             "type": "object",
@@ -480,118 +312,62 @@
             "properties": {
                 "city": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "City for the contact\n"
                 },
                 "country": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The two letter country code for the contact\n"
                 },
                 "dataObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact data in WHOIS\n"
                 },
                 "email": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Contact email address\n"
                 },
                 "extraParameters": {
                     "type": "object",
                     "additionalProperties": {
                         "type": "string"
                     },
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Extra parameters, needed for some jurisdictions\n"
                 },
                 "familyName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Family name of the contact\n"
                 },
                 "givenName": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Given name of the contact\n"
                 },
                 "mailObfuscated": {
                     "type": "boolean",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Whether or not to obfuscate contact email in WHOIS\n"
                 },
                 "organisation": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The legal name of the organisation. Required for types other than person\n"
                 },
                 "phone": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Phone number for the contact\n"
                 },
                 "state": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "The state code for the contact\n"
                 },
                 "streetAddr": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Street Address of the contact\n"
                 },
                 "type": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "One of 'person', 'company', 'association', 'public body', or 'reseller'\n"
                 },
                 "zip": {
                     "type": "string",
-                    "language": {
-                        "python": {
-                            "mapCase": false
-                        }
-                    }
+                    "description": "Postal Code/Zipcode of the contact\n"
                 }
             },
             "type": "object",
@@ -613,43 +389,48 @@
         "properties": {
             "dryRun": {
                 "type": "boolean",
-                "description": "Prevent the Domain provider from taking certain actions\n"
+                "description": "Prevent the Domain provider from taking certain actions"
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key\n"
+                "description": "A Gandi API key",
+                "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID\n"
+                "description": "A Gandi Sharing ID"
             },
             "url": {
                 "type": "string",
-                "description": "The Gandi API URL\n"
+                "description": "The Gandi API URL"
             }
         },
         "inputProperties": {
             "dryRun": {
                 "type": "boolean",
-                "description": "Prevent the Domain provider from taking certain actions\n"
+                "description": "Prevent the Domain provider from taking certain actions"
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key\n",
+                "description": "A Gandi API key",
                 "defaultInfo": {
                     "environment": [
                         "GANDI_KEY"
                     ]
-                }
+                },
+                "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID\n"
+                "description": "A Gandi Sharing ID"
             },
             "url": {
                 "type": "string",
-                "description": "The Gandi API URL\n"
+                "description": "The Gandi API URL"
             }
+        },
+        "methods": {
+            "terraformConfig": "pulumi:providers:gandi/terraformConfig"
         }
     },
     "resources": {
@@ -1099,7 +880,8 @@
                 },
                 "password": {
                     "type": "string",
-                    "description": "Password\n"
+                    "description": "Password\n",
+                    "secret": true
                 }
             },
             "required": [
@@ -1129,7 +911,8 @@
                 },
                 "password": {
                     "type": "string",
-                    "description": "Password\n"
+                    "description": "Password\n",
+                    "secret": true
                 }
             },
             "requiredInputs": [
@@ -1161,7 +944,8 @@
                     },
                     "password": {
                         "type": "string",
-                        "description": "Password\n"
+                        "description": "Password\n",
+                        "secret": true
                     }
                 },
                 "type": "object"
@@ -1232,8 +1016,7 @@
                     "description": "The href of the record\n"
                 },
                 "mutable": {
-                    "type": "boolean",
-                    "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
+                    "type": "boolean"
                 },
                 "name": {
                     "type": "string",
@@ -1269,8 +1052,7 @@
             ],
             "inputProperties": {
                 "mutable": {
-                    "type": "boolean",
-                    "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
+                    "type": "boolean"
                 },
                 "name": {
                     "type": "string",
@@ -1313,8 +1095,7 @@
                         "description": "The href of the record\n"
                     },
                     "mutable": {
-                        "type": "boolean",
-                        "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
+                        "type": "boolean"
                     },
                     "name": {
                         "type": "string",
@@ -1533,7 +1314,8 @@
                 "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "The FQDN of the domain\n"
                     }
                 },
                 "type": "object",
@@ -1545,25 +1327,27 @@
                 "description": "A collection of values returned by getDomain.\n",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
                     },
                     "name": {
+                        "description": "The FQDN of the domain\n",
                         "type": "string"
                     },
                     "nameservers": {
-                        "type": "array",
+                        "description": "A list of nameservers for the domain\n",
                         "items": {
                             "type": "string"
-                        }
+                        },
+                        "type": "array"
                     }
                 },
-                "type": "object",
                 "required": [
                     "name",
                     "nameservers",
                     "id"
-                ]
+                ],
+                "type": "object"
             }
         },
         "gandi:domains/getGlueRecord:getGlueRecord": {
@@ -1571,10 +1355,12 @@
                 "description": "A collection of arguments for invoking getGlueRecord.\n",
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "Host name of the glue record\n"
                     },
                     "zone": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "Domain name\n"
                     }
                 },
                 "type": "object",
@@ -1587,29 +1373,32 @@
                 "description": "A collection of values returned by getGlueRecord.\n",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
                     },
                     "ips": {
-                        "type": "array",
+                        "description": "A list of the ip addresses provided for the glue record\n",
                         "items": {
                             "type": "string"
-                        }
+                        },
+                        "type": "array"
                     },
                     "name": {
+                        "description": "Host name of the glue record\n",
                         "type": "string"
                     },
                     "zone": {
+                        "description": "Domain name\n",
                         "type": "string"
                     }
                 },
-                "type": "object",
                 "required": [
                     "ips",
                     "name",
                     "zone",
                     "id"
-                ]
+                ],
+                "type": "object"
             }
         },
         "gandi:email/getMailbox:getMailbox": {
@@ -1617,10 +1406,12 @@
                 "description": "A collection of arguments for invoking getMailbox.\n",
                 "properties": {
                     "domain": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "Domain name\n"
                     },
                     "mailboxId": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "Mailbox ID\n"
                     }
                 },
                 "type": "object",
@@ -1633,22 +1424,24 @@
                 "description": "A collection of values returned by getMailbox.\n",
                 "properties": {
                     "domain": {
+                        "description": "Domain name\n",
                         "type": "string"
                     },
                     "id": {
-                        "type": "string",
-                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
                     },
                     "mailboxId": {
+                        "description": "Mailbox ID\n",
                         "type": "string"
                     }
                 },
-                "type": "object",
                 "required": [
                     "domain",
                     "mailboxId",
                     "id"
-                ]
+                ],
+                "type": "object"
             }
         },
         "gandi:livedns/getDomain:getDomain": {
@@ -1656,7 +1449,8 @@
                 "description": "A collection of arguments for invoking getDomain.\n",
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "The FQDN of the domain\n"
                     }
                 },
                 "type": "object",
@@ -1668,18 +1462,19 @@
                 "description": "A collection of values returned by getDomain.\n",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
                     },
                     "name": {
+                        "description": "The FQDN of the domain\n",
                         "type": "string"
                     }
                 },
-                "type": "object",
                 "required": [
                     "name",
                     "id"
-                ]
+                ],
+                "type": "object"
             }
         },
         "gandi:livedns/getDomainNameserver:getDomainNameserver": {
@@ -1687,7 +1482,8 @@
                 "description": "A collection of arguments for invoking getDomainNameserver.\n",
                 "properties": {
                     "name": {
-                        "type": "string"
+                        "type": "string",
+                        "description": "The FQDN of the domain\n"
                     }
                 },
                 "type": "object",
@@ -1699,25 +1495,56 @@
                 "description": "A collection of values returned by getDomainNameserver.\n",
                 "properties": {
                     "id": {
-                        "type": "string",
-                        "description": "The provider-assigned unique ID for this managed resource.\n"
+                        "description": "The provider-assigned unique ID for this managed resource.",
+                        "type": "string"
                     },
                     "name": {
+                        "description": "The FQDN of the domain\n",
                         "type": "string"
                     },
                     "nameservers": {
-                        "type": "array",
+                        "description": "A list of nameservers for the domain\n",
                         "items": {
                             "type": "string"
-                        }
+                        },
+                        "type": "array"
                     }
                 },
-                "type": "object",
                 "required": [
                     "name",
                     "nameservers",
                     "id"
+                ],
+                "type": "object"
+            }
+        },
+        "pulumi:providers:gandi/terraformConfig": {
+            "description": "This function returns a Terraform config object with terraform-namecased keys,to be used with the Terraform Module Provider.",
+            "inputs": {
+                "properties": {
+                    "__self__": {
+                        "type": "ref",
+                        "$ref": "#/provider"
+                    }
+                },
+                "type": "pulumi:providers:gandi/terraformConfig",
+                "required": [
+                    "__self__"
                 ]
+            },
+            "outputs": {
+                "properties": {
+                    "result": {
+                        "additionalProperties": {
+                            "$ref": "pulumi.json#/Any"
+                        },
+                        "type": "object"
+                    }
+                },
+                "required": [
+                    "result"
+                ],
+                "type": "object"
             }
         }
     }

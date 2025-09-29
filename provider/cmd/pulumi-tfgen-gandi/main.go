@@ -16,8 +16,9 @@ package main
 
 import (
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfgen"
-	gandi "github.com/pulumiverse/pulumi-gandi/provider"
-	"github.com/pulumiverse/pulumi-gandi/provider/pkg/version"
+
+	gandi "github.com/pulumiverse/pulumi-gandi/provider/v2"
+	"github.com/pulumiverse/pulumi-gandi/provider/v2/pkg/version"
 )
 
 func main() {
