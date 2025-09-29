@@ -23,7 +23,7 @@ import (
 	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
 	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
-	"github.com/pulumiverse/pulumi-gandi/provider/pkg/version"
+	"github.com/pulumiverse/pulumi-gandi/provider/v2/pkg/version"
 )
 
 const (
@@ -75,7 +75,8 @@ func Provider() tfbridge.ProviderInfo {
 		Repository: "https://github.com/pulumiverse/pulumi-gandi",
 		// The GitHub Org for the provider - defaults to `terraform-providers`. Note that this
 		// should match the TF provider module's require directive, not any replace directives.
-		GitHubOrg: "go-gandi",
+		GitHubOrg:               "go-gandi",
+		TFProviderModuleVersion: "v2",
 		Config: map[string]*tfbridge.SchemaInfo{
 			"key": {
 				Default: &tfbridge.DefaultInfo{
