@@ -18,6 +18,8 @@ import (
 	"fmt"
 	"path/filepath"
 
+	_ "embed"
+
 	"github.com/go-gandi/terraform-provider-gandi/v2/gandi"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
@@ -30,15 +32,16 @@ const (
 	mainPkg = "gandi"
 )
 
+//go:embed cmd/pulumi-resource-gandi/bridge-metadata.json
+var metadata []byte
+
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
-	// Instantiate the Terraform provider
-	p := shimv2.NewProvider(gandi.Provider())
-
 	// Create a Pulumi provider mapping
 	prov := tfbridge.ProviderInfo{
-		P:    p,
-		Name: "gandi",
+		P:       shimv2.NewProvider(gandi.Provider()),
+		Name:    "gandi",
+		Version: version.Version,
 		// DisplayName is a way to be able to change the casing of the provider
 		// name when being displayed on the Pulumi registry
 		DisplayName: "Gandi",
@@ -69,6 +72,7 @@ func Provider() tfbridge.ProviderInfo {
 		// should match the TF provider module's require directive, not any replace directives.
 		GitHubOrg:               "go-gandi",
 		TFProviderModuleVersion: "v2",
+		MetadataInfo:            tfbridge.NewProviderMetadata(metadata),
 		Config: map[string]*tfbridge.SchemaInfo{
 			"key": {
 				Default: &tfbridge.DefaultInfo{
@@ -138,22 +142,11 @@ func Provider() tfbridge.ProviderInfo {
 		JavaScript: &tfbridge.JavaScriptInfo{
 			RespectSchemaVersion: true,
 			PackageName:          "@pulumiverse/gandi",
-			// List any npm dependencies and their versions
-			Dependencies: map[string]string{
-				"@pulumi/pulumi": "^3.0.0",
-			},
-			DevDependencies: map[string]string{
-				"@types/node": "^10.0.0", // so we can access strongly typed node definitions.
-				"@types/mime": "^2.0.0",
-			},
 		},
 		Python: &tfbridge.PythonInfo{
 			RespectSchemaVersion: true,
 			PackageName:          "pulumiverse_gandi",
-			// List any Python dependencies and their version ranges
-			Requires: map[string]string{
-				"pulumi": ">=3.0.0,<4.0.0",
-			},
+			PyProject:            struct{ Enabled bool }{true},
 		},
 		Golang: &tfbridge.GolangInfo{
 			RespectSchemaVersion: true,
@@ -163,6 +156,7 @@ func Provider() tfbridge.ProviderInfo {
 				"go",
 				mainPkg,
 			),
+			GenerateExtraInputTypes:        true,
 			GenerateResourceContainerTypes: true,
 		},
 		CSharp: &tfbridge.CSharpInfo{
