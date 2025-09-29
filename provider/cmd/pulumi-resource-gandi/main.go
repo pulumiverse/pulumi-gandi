@@ -18,8 +18,8 @@ import (
 	_ "embed"
 
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	gandi "github.com/pulumiverse/pulumi-gandi/provider/v2"
 
+	gandi "github.com/pulumiverse/pulumi-gandi/provider/v2"
 	"github.com/pulumiverse/pulumi-gandi/provider/v2/pkg/version"
 )
 

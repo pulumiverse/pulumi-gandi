@@ -19,24 +19,16 @@ import (
 	"path/filepath"
 
 	"github.com/go-gandi/terraform-provider-gandi/v2/gandi"
+
 	"github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfbridge"
-	shim "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim"
 	shimv2 "github.com/pulumi/pulumi-terraform-bridge/v3/pkg/tfshim/sdk-v2"
-	"github.com/pulumi/pulumi/sdk/v3/go/common/resource"
+
 	"github.com/pulumiverse/pulumi-gandi/provider/v2/pkg/version"
 )
 
 const (
 	mainPkg = "gandi"
 )
-
-// preConfigureCallback is called before the providerConfigure function of the underlying provider.
-// It should validate that the provider can be configured, and provide actionable errors in the case
-// it cannot be. Configuration variables can be read from `vars` using the `stringValue` function -
-// for example `stringValue(vars, "accessKey")`.
-func preConfigureCallback(vars resource.PropertyMap, c shim.ResourceConfig) error {
-	return nil
-}
 
 // Provider returns additional overlaid schema and metadata associated with the provider..
 func Provider() tfbridge.ProviderInfo {
@@ -84,7 +76,6 @@ func Provider() tfbridge.ProviderInfo {
 				},
 			},
 		},
-		PreConfigureCallback: preConfigureCallback,
 		Resources: map[string]*tfbridge.ResourceInfo{
 			"gandi_domain": {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Domain"),
@@ -92,7 +83,7 @@ func Provider() tfbridge.ProviderInfo {
 			"gandi_nameservers": {
 				Tok: tfbridge.MakeResource(mainPkg, "domains", "Nameservers"),
 				Fields: map[string]*tfbridge.SchemaInfo{
-					"nameservers": &tfbridge.SchemaInfo{
+					"nameservers": {
 						CSharpName: "Servers",
 					},
 				},
