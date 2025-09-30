@@ -19,3 +19,4 @@ plugins:
 registryDocs: true
 publishRegistry: false
 goBuildParallelism: 2
+autoMergeProviderUpgrades: true
