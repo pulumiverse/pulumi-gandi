@@ -2,6 +2,6 @@
 
 ---
 upstream-provider-name: terraform-provider-gandi
-upstream-provider-org: gandi-go
+upstream-provider-org: go-gandi
 pulumi-infer-version: true
 remove-plugins: true
