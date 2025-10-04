@@ -30,14 +30,21 @@ class _ExportableConfig(types.ModuleType):
     @_builtins.property
     def key(self) -> Optional[str]:
         """
-        A Gandi API key
+        (DEPRECATED) A Gandi API key
         """
         return __config__.get('key') or _utilities.get_env('GANDI_KEY')
 
     @_builtins.property
+    def personal_access_token(self) -> Optional[str]:
+        """
+        A Gandi API Personal Access Token
+        """
+        return __config__.get('personalAccessToken')
+
+    @_builtins.property
     def sharing_id(self) -> Optional[str]:
         """
-        A Gandi Sharing ID
+        (DEPRECATED) A Gandi Sharing ID
         """
         return __config__.get('sharingId')
 

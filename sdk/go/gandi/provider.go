@@ -18,9 +18,15 @@ import (
 type Provider struct {
 	pulumi.ProviderResourceState
 
-	// A Gandi API key
+	// (DEPRECATED) A Gandi API key
+	//
+	// Deprecated: use personalAccessToken instead
 	Key pulumi.StringPtrOutput `pulumi:"key"`
-	// A Gandi Sharing ID
+	// A Gandi API Personal Access Token
+	PersonalAccessToken pulumi.StringPtrOutput `pulumi:"personalAccessToken"`
+	// (DEPRECATED) A Gandi Sharing ID
+	//
+	// Deprecated: use personalAccessToken instead
 	SharingId pulumi.StringPtrOutput `pulumi:"sharingId"`
 	// The Gandi API URL
 	Url pulumi.StringPtrOutput `pulumi:"url"`
@@ -41,8 +47,12 @@ func NewProvider(ctx *pulumi.Context,
 	if args.Key != nil {
 		args.Key = pulumi.ToSecret(args.Key).(pulumi.StringPtrInput)
 	}
+	if args.PersonalAccessToken != nil {
+		args.PersonalAccessToken = pulumi.ToSecret(args.PersonalAccessToken).(pulumi.StringPtrInput)
+	}
 	secrets := pulumi.AdditionalSecretOutputs([]string{
 		"key",
+		"personalAccessToken",
 	})
 	opts = append(opts, secrets)
 	opts = internal.PkgResourceDefaultOpts(opts)
@@ -57,9 +67,15 @@ func NewProvider(ctx *pulumi.Context,
 type providerArgs struct {
 	// Prevent the Domain provider from taking certain actions
 	DryRun *bool `pulumi:"dryRun"`
-	// A Gandi API key
+	// (DEPRECATED) A Gandi API key
+	//
+	// Deprecated: use personalAccessToken instead
 	Key *string `pulumi:"key"`
-	// A Gandi Sharing ID
+	// A Gandi API Personal Access Token
+	PersonalAccessToken *string `pulumi:"personalAccessToken"`
+	// (DEPRECATED) A Gandi Sharing ID
+	//
+	// Deprecated: use personalAccessToken instead
 	SharingId *string `pulumi:"sharingId"`
 	// The Gandi API URL
 	Url *string `pulumi:"url"`
@@ -69,9 +85,15 @@ type providerArgs struct {
 type ProviderArgs struct {
 	// Prevent the Domain provider from taking certain actions
 	DryRun pulumi.BoolPtrInput
-	// A Gandi API key
+	// (DEPRECATED) A Gandi API key
+	//
+	// Deprecated: use personalAccessToken instead
 	Key pulumi.StringPtrInput
-	// A Gandi Sharing ID
+	// A Gandi API Personal Access Token
+	PersonalAccessToken pulumi.StringPtrInput
+	// (DEPRECATED) A Gandi Sharing ID
+	//
+	// Deprecated: use personalAccessToken instead
 	SharingId pulumi.StringPtrInput
 	// The Gandi API URL
 	Url pulumi.StringPtrInput
@@ -137,12 +159,21 @@ func (o ProviderOutput) ToProviderOutputWithContext(ctx context.Context) Provide
 	return o
 }
 
-// A Gandi API key
+// (DEPRECATED) A Gandi API key
+//
+// Deprecated: use personalAccessToken instead
 func (o ProviderOutput) Key() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.Key }).(pulumi.StringPtrOutput)
 }
 
-// A Gandi Sharing ID
+// A Gandi API Personal Access Token
+func (o ProviderOutput) PersonalAccessToken() pulumi.StringPtrOutput {
+	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.PersonalAccessToken }).(pulumi.StringPtrOutput)
+}
+
+// (DEPRECATED) A Gandi Sharing ID
+//
+// Deprecated: use personalAccessToken instead
 func (o ProviderOutput) SharingId() pulumi.StringPtrOutput {
 	return o.ApplyT(func(v *Provider) pulumi.StringPtrOutput { return v.SharingId }).(pulumi.StringPtrOutput)
 }
