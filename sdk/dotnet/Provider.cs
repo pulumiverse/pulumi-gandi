@@ -19,13 +19,19 @@ namespace Pulumi.Gandi
     public partial class Provider : global::Pulumi.ProviderResource
     {
         /// <summary>
-        /// A Gandi API key
+        /// (DEPRECATED) A Gandi API key
         /// </summary>
         [Output("key")]
         public Output<string?> Key { get; private set; } = null!;
 
         /// <summary>
-        /// A Gandi Sharing ID
+        /// A Gandi API Personal Access Token
+        /// </summary>
+        [Output("personalAccessToken")]
+        public Output<string?> PersonalAccessToken { get; private set; } = null!;
+
+        /// <summary>
+        /// (DEPRECATED) A Gandi Sharing ID
         /// </summary>
         [Output("sharingId")]
         public Output<string?> SharingId { get; private set; } = null!;
@@ -58,6 +64,7 @@ namespace Pulumi.Gandi
                 AdditionalSecretOutputs =
                 {
                     "key",
+                    "personalAccessToken",
                 },
             };
             var merged = CustomResourceOptions.Merge(defaultOptions, options);
@@ -85,8 +92,9 @@ namespace Pulumi.Gandi
         private Input<string>? _key;
 
         /// <summary>
-        /// A Gandi API key
+        /// (DEPRECATED) A Gandi API key
         /// </summary>
+        [Obsolete(@"use personal_access_token instead")]
         public Input<string>? Key
         {
             get => _key;
@@ -97,8 +105,24 @@ namespace Pulumi.Gandi
             }
         }
 
+        [Input("personalAccessToken")]
+        private Input<string>? _personalAccessToken;
+
         /// <summary>
-        /// A Gandi Sharing ID
+        /// A Gandi API Personal Access Token
+        /// </summary>
+        public Input<string>? PersonalAccessToken
+        {
+            get => _personalAccessToken;
+            set
+            {
+                var emptySecret = Output.CreateSecret(0);
+                _personalAccessToken = Output.Tuple<Input<string>?, int>(value, emptySecret).Apply(t => t.Item1);
+            }
+        }
+
+        /// <summary>
+        /// (DEPRECATED) A Gandi Sharing ID
         /// </summary>
         [Input("sharingId")]
         public Input<string>? SharingId { get; set; }

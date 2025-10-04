@@ -19,7 +19,7 @@ Object.defineProperty(exports, "dryRun", {
 });
 
 /**
- * A Gandi API key
+ * (DEPRECATED) A Gandi API key
  */
 export declare const key: string | undefined;
 Object.defineProperty(exports, "key", {
@@ -30,7 +30,18 @@ Object.defineProperty(exports, "key", {
 });
 
 /**
- * A Gandi Sharing ID
+ * A Gandi API Personal Access Token
+ */
+export declare const personalAccessToken: string | undefined;
+Object.defineProperty(exports, "personalAccessToken", {
+    get() {
+        return __config.get("personalAccessToken");
+    },
+    enumerable: true,
+});
+
+/**
+ * (DEPRECATED) A Gandi Sharing ID
  */
 export declare const sharingId: string | undefined;
 Object.defineProperty(exports, "sharingId", {

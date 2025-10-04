@@ -37,8 +37,8 @@ Use the navigation to the left to read about the available resources.
 name: configuration-example
 runtime: nodejs
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```typescript
@@ -54,8 +54,8 @@ const exampleCom = new gandi.domains.Domain("example_com", {name: "example.com"}
 name: configuration-example
 runtime: python
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```python
@@ -71,8 +71,8 @@ example_com = gandi.domains.Domain("example_com", name="example.com")
 name: configuration-example
 runtime: dotnet
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```csharp
@@ -98,8 +98,8 @@ return await Deployment.RunAsync(() =>
 name: configuration-example
 runtime: go
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```go
@@ -129,8 +129,8 @@ func main() {
 name: configuration-example
 runtime: yaml
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```yaml
@@ -148,8 +148,8 @@ resources:
 name: configuration-example
 runtime: java
 config:
-    gandi:key:
-        value: MY_API_KEY
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ```java
@@ -186,9 +186,9 @@ public class App {
 
 The Gandi provider supports a couple of different methods for providing authentication credentials.
 
-You can retrieve your API key by visiting the [Account Management](https://account.gandi.net/en/) screen, going to the `Security` tab and generating your `Production API Key`.
+The recommended way is to create a Personal Access Token. Read more about these tokens in the [Gandi public API documentation](https://api.gandi.net/docs/authentication/).
 
-Optionally, you can provide a Sharing ID to specify an organization. If set, the Sharing ID indicates the organization that will pay for any ordered products, and will filter collections.
+The previous method of using an API key is now deprecated and should not be used anymore, though it is still supported by this provider for now. When using an API Key, you could also provide a Sharing ID to specify an organization. If set, the Sharing ID indicates the organization that will pay for any ordered products, and will filter collections.
 ### Static Credentials
 
 !> Hard-coding credentials into any Pulumi configuration is not recommended, and risks leaking secrets should the configuration be committed to public version control.
@@ -200,15 +200,13 @@ Usage:
 name: configuration-example
 runtime:
 config:
-    gandi:key:
-        value: MY_API_KEY
-    gandi:sharingId:
-        value: MY_SHARING_ID
+    gandi:personalAccessToken:
+        value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
 ### Environment Variables
 
-You can provide your credentials via the `GANDI_KEY` and `GANDI_SHARING_ID` environment variables, representing the API Key and the Sharing ID, respectively.
+You can provide your credentials via the `GANDI_PERSONAL_ACCESS_TOKEN` environment variable, representing the Personal Access Token.
 
 ```yaml
 # Pulumi.yaml provider configuration file
