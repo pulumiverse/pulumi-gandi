@@ -21,12 +21,17 @@ Prevent the Domain provider from taking certain actions
 
 key: Optional[str]
 """
-A Gandi API key
+(DEPRECATED) A Gandi API key
+"""
+
+personalAccessToken: Optional[str]
+"""
+A Gandi API Personal Access Token
 """
 
 sharingId: Optional[str]
 """
-A Gandi Sharing ID
+(DEPRECATED) A Gandi Sharing ID
 """
 
 url: Optional[str]
