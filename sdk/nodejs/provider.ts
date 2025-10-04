@@ -26,11 +26,19 @@ export class Provider extends pulumi.ProviderResource {
     }
 
     /**
-     * A Gandi API key
+     * (DEPRECATED) A Gandi API key
+     *
+     * @deprecated use personalAccessToken instead
      */
     declare public readonly key: pulumi.Output<string | undefined>;
     /**
-     * A Gandi Sharing ID
+     * A Gandi API Personal Access Token
+     */
+    declare public readonly personalAccessToken: pulumi.Output<string | undefined>;
+    /**
+     * (DEPRECATED) A Gandi Sharing ID
+     *
+     * @deprecated use personalAccessToken instead
      */
     declare public readonly sharingId: pulumi.Output<string | undefined>;
     /**
@@ -51,11 +59,12 @@ export class Provider extends pulumi.ProviderResource {
         {
             resourceInputs["dryRun"] = pulumi.output(args?.dryRun).apply(JSON.stringify);
             resourceInputs["key"] = (args?.key ? pulumi.secret(args.key) : undefined) ?? utilities.getEnv("GANDI_KEY");
+            resourceInputs["personalAccessToken"] = args?.personalAccessToken ? pulumi.secret(args.personalAccessToken) : undefined;
             resourceInputs["sharingId"] = args?.sharingId;
             resourceInputs["url"] = args?.url;
         }
         opts = pulumi.mergeOptions(utilities.resourceOptsDefaults(), opts);
-        const secretOpts = { additionalSecretOutputs: ["key"] };
+        const secretOpts = { additionalSecretOutputs: ["key", "personalAccessToken"] };
         opts = pulumi.mergeOptions(opts, secretOpts);
         super(Provider.__pulumiType, name, resourceInputs, opts);
     }
@@ -79,11 +88,19 @@ export interface ProviderArgs {
      */
     dryRun?: pulumi.Input<boolean>;
     /**
-     * A Gandi API key
+     * (DEPRECATED) A Gandi API key
+     *
+     * @deprecated use personalAccessToken instead
      */
     key?: pulumi.Input<string>;
     /**
-     * A Gandi Sharing ID
+     * A Gandi API Personal Access Token
+     */
+    personalAccessToken?: pulumi.Input<string>;
+    /**
+     * (DEPRECATED) A Gandi Sharing ID
+     *
+     * @deprecated use personalAccessToken instead
      */
     sharingId?: pulumi.Input<string>;
     /**

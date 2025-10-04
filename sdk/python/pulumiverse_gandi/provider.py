@@ -21,21 +21,31 @@ class ProviderArgs:
     def __init__(__self__, *,
                  dry_run: Optional[pulumi.Input[_builtins.bool]] = None,
                  key: Optional[pulumi.Input[_builtins.str]] = None,
+                 personal_access_token: Optional[pulumi.Input[_builtins.str]] = None,
                  sharing_id: Optional[pulumi.Input[_builtins.str]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Provider resource.
         :param pulumi.Input[_builtins.bool] dry_run: Prevent the Domain provider from taking certain actions
-        :param pulumi.Input[_builtins.str] key: A Gandi API key
-        :param pulumi.Input[_builtins.str] sharing_id: A Gandi Sharing ID
+        :param pulumi.Input[_builtins.str] key: (DEPRECATED) A Gandi API key
+        :param pulumi.Input[_builtins.str] personal_access_token: A Gandi API Personal Access Token
+        :param pulumi.Input[_builtins.str] sharing_id: (DEPRECATED) A Gandi Sharing ID
         :param pulumi.Input[_builtins.str] url: The Gandi API URL
         """
         if dry_run is not None:
             pulumi.set(__self__, "dry_run", dry_run)
+        if key is not None:
+            warnings.warn("""use personal_access_token instead""", DeprecationWarning)
+            pulumi.log.warn("""key is deprecated: use personal_access_token instead""")
         if key is None:
             key = _utilities.get_env('GANDI_KEY')
         if key is not None:
             pulumi.set(__self__, "key", key)
+        if personal_access_token is not None:
+            pulumi.set(__self__, "personal_access_token", personal_access_token)
+        if sharing_id is not None:
+            warnings.warn("""use personal_access_token instead""", DeprecationWarning)
+            pulumi.log.warn("""sharing_id is deprecated: use personal_access_token instead""")
         if sharing_id is not None:
             pulumi.set(__self__, "sharing_id", sharing_id)
         if url is not None:
@@ -55,9 +65,10 @@ class ProviderArgs:
 
     @_builtins.property
     @pulumi.getter
+    @_utilities.deprecated("""use personal_access_token instead""")
     def key(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        A Gandi API key
+        (DEPRECATED) A Gandi API key
         """
         return pulumi.get(self, "key")
 
@@ -66,10 +77,23 @@ class ProviderArgs:
         pulumi.set(self, "key", value)
 
     @_builtins.property
+    @pulumi.getter(name="personalAccessToken")
+    def personal_access_token(self) -> Optional[pulumi.Input[_builtins.str]]:
+        """
+        A Gandi API Personal Access Token
+        """
+        return pulumi.get(self, "personal_access_token")
+
+    @personal_access_token.setter
+    def personal_access_token(self, value: Optional[pulumi.Input[_builtins.str]]):
+        pulumi.set(self, "personal_access_token", value)
+
+    @_builtins.property
     @pulumi.getter(name="sharingId")
+    @_utilities.deprecated("""use personal_access_token instead""")
     def sharing_id(self) -> Optional[pulumi.Input[_builtins.str]]:
         """
-        A Gandi Sharing ID
+        (DEPRECATED) A Gandi Sharing ID
         """
         return pulumi.get(self, "sharing_id")
 
@@ -98,6 +122,7 @@ class Provider(pulumi.ProviderResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  dry_run: Optional[pulumi.Input[_builtins.bool]] = None,
                  key: Optional[pulumi.Input[_builtins.str]] = None,
+                 personal_access_token: Optional[pulumi.Input[_builtins.str]] = None,
                  sharing_id: Optional[pulumi.Input[_builtins.str]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -110,8 +135,9 @@ class Provider(pulumi.ProviderResource):
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] dry_run: Prevent the Domain provider from taking certain actions
-        :param pulumi.Input[_builtins.str] key: A Gandi API key
-        :param pulumi.Input[_builtins.str] sharing_id: A Gandi Sharing ID
+        :param pulumi.Input[_builtins.str] key: (DEPRECATED) A Gandi API key
+        :param pulumi.Input[_builtins.str] personal_access_token: A Gandi API Personal Access Token
+        :param pulumi.Input[_builtins.str] sharing_id: (DEPRECATED) A Gandi Sharing ID
         :param pulumi.Input[_builtins.str] url: The Gandi API URL
         """
         ...
@@ -143,6 +169,7 @@ class Provider(pulumi.ProviderResource):
                  opts: Optional[pulumi.ResourceOptions] = None,
                  dry_run: Optional[pulumi.Input[_builtins.bool]] = None,
                  key: Optional[pulumi.Input[_builtins.str]] = None,
+                 personal_access_token: Optional[pulumi.Input[_builtins.str]] = None,
                  sharing_id: Optional[pulumi.Input[_builtins.str]] = None,
                  url: Optional[pulumi.Input[_builtins.str]] = None,
                  __props__=None):
@@ -158,9 +185,10 @@ class Provider(pulumi.ProviderResource):
             if key is None:
                 key = _utilities.get_env('GANDI_KEY')
             __props__.__dict__["key"] = None if key is None else pulumi.Output.secret(key)
+            __props__.__dict__["personal_access_token"] = None if personal_access_token is None else pulumi.Output.secret(personal_access_token)
             __props__.__dict__["sharing_id"] = sharing_id
             __props__.__dict__["url"] = url
-        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["key"])
+        secret_opts = pulumi.ResourceOptions(additional_secret_outputs=["key", "personalAccessToken"])
         opts = pulumi.ResourceOptions.merge(opts, secret_opts)
         super(Provider, __self__).__init__(
             'gandi',
@@ -170,17 +198,27 @@ class Provider(pulumi.ProviderResource):
 
     @_builtins.property
     @pulumi.getter
+    @_utilities.deprecated("""use personal_access_token instead""")
     def key(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        A Gandi API key
+        (DEPRECATED) A Gandi API key
         """
         return pulumi.get(self, "key")
 
     @_builtins.property
+    @pulumi.getter(name="personalAccessToken")
+    def personal_access_token(self) -> pulumi.Output[Optional[_builtins.str]]:
+        """
+        A Gandi API Personal Access Token
+        """
+        return pulumi.get(self, "personal_access_token")
+
+    @_builtins.property
     @pulumi.getter(name="sharingId")
+    @_utilities.deprecated("""use personal_access_token instead""")
     def sharing_id(self) -> pulumi.Output[Optional[_builtins.str]]:
         """
-        A Gandi Sharing ID
+        (DEPRECATED) A Gandi Sharing ID
         """
         return pulumi.get(self, "sharing_id")
 

@@ -16,7 +16,9 @@ func GetDryRun(ctx *pulumi.Context) bool {
 	return config.GetBool(ctx, "gandi:dryRun")
 }
 
-// A Gandi API key
+// (DEPRECATED) A Gandi API key
+//
+// Deprecated: use personalAccessToken instead
 func GetKey(ctx *pulumi.Context) string {
 	v, err := config.Try(ctx, "gandi:key")
 	if err == nil {
@@ -29,7 +31,14 @@ func GetKey(ctx *pulumi.Context) string {
 	return value
 }
 
-// A Gandi Sharing ID
+// A Gandi API Personal Access Token
+func GetPersonalAccessToken(ctx *pulumi.Context) string {
+	return config.Get(ctx, "gandi:personalAccessToken")
+}
+
+// (DEPRECATED) A Gandi Sharing ID
+//
+// Deprecated: use personalAccessToken instead
 func GetSharingId(ctx *pulumi.Context) string {
 	return config.Get(ctx, "gandi:sharingId")
 }

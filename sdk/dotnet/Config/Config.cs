@@ -44,7 +44,7 @@ namespace Pulumi.Gandi
 
         private static readonly __Value<string?> _key = new __Value<string?>(() => __config.Get("key") ?? Utilities.GetEnv("GANDI_KEY"));
         /// <summary>
-        /// A Gandi API key
+        /// (DEPRECATED) A Gandi API key
         /// </summary>
         public static string? Key
         {
@@ -52,9 +52,19 @@ namespace Pulumi.Gandi
             set => _key.Set(value);
         }
 
+        private static readonly __Value<string?> _personalAccessToken = new __Value<string?>(() => __config.Get("personalAccessToken"));
+        /// <summary>
+        /// A Gandi API Personal Access Token
+        /// </summary>
+        public static string? PersonalAccessToken
+        {
+            get => _personalAccessToken.Get();
+            set => _personalAccessToken.Set(value);
+        }
+
         private static readonly __Value<string?> _sharingId = new __Value<string?>(() => __config.Get("sharingId"));
         /// <summary>
-        /// A Gandi Sharing ID
+        /// (DEPRECATED) A Gandi Sharing ID
         /// </summary>
         public static string? SharingId
         {

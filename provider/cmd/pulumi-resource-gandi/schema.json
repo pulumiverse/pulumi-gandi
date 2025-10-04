@@ -57,26 +57,30 @@
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key",
+                "description": "(DEPRECATED) A Gandi API key",
                 "defaultInfo": {
                     "environment": [
                         "GANDI_KEY"
                     ]
                 },
+                "deprecationMessage": "use personal_access_token instead",
+                "secret": true
+            },
+            "personalAccessToken": {
+                "type": "string",
+                "description": "A Gandi API Personal Access Token",
                 "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID"
+                "description": "(DEPRECATED) A Gandi Sharing ID",
+                "deprecationMessage": "use personal_access_token instead"
             },
             "url": {
                 "type": "string",
                 "description": "The Gandi API URL"
             }
-        },
-        "defaults": [
-            "key"
-        ]
+        }
     },
     "types": {
         "gandi:domains/DomainAdmin:DomainAdmin": {
@@ -389,12 +393,19 @@
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key",
+                "description": "(DEPRECATED) A Gandi API key",
+                "deprecationMessage": "use personal_access_token instead",
+                "secret": true
+            },
+            "personalAccessToken": {
+                "type": "string",
+                "description": "A Gandi API Personal Access Token",
                 "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID"
+                "description": "(DEPRECATED) A Gandi Sharing ID",
+                "deprecationMessage": "use personal_access_token instead"
             },
             "url": {
                 "type": "string",
@@ -408,17 +419,24 @@
             },
             "key": {
                 "type": "string",
-                "description": "A Gandi API key",
+                "description": "(DEPRECATED) A Gandi API key",
                 "defaultInfo": {
                     "environment": [
                         "GANDI_KEY"
                     ]
                 },
+                "deprecationMessage": "use personal_access_token instead",
+                "secret": true
+            },
+            "personalAccessToken": {
+                "type": "string",
+                "description": "A Gandi API Personal Access Token",
                 "secret": true
             },
             "sharingId": {
                 "type": "string",
-                "description": "A Gandi Sharing ID"
+                "description": "(DEPRECATED) A Gandi Sharing ID",
+                "deprecationMessage": "use personal_access_token instead"
             },
             "url": {
                 "type": "string",
