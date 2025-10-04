@@ -1598,10 +1598,10 @@ github.com/go-fonts/latin-modern v0.2.0/go.mod h1:rQVLdDMK+mK1xscDwsqM5J8U2jrRa3
 github.com/go-fonts/liberation v0.1.1/go.mod h1:K6qoJYypsmfVjWg8KOVDQhLc8UDgIK2HYqyqAO9z7GY=
 github.com/go-fonts/liberation v0.2.0/go.mod h1:K6qoJYypsmfVjWg8KOVDQhLc8UDgIK2HYqyqAO9z7GY=
 github.com/go-fonts/stix v0.1.0/go.mod h1:w/c1f0ldAUlJmLBvlbkvVXLAD+tAMqobIIQpmnUIzUY=
-github.com/go-gandi/go-gandi v0.5.0 h1:QpE/O2LHO7w5XTgAB0HaNy+hLS1oEv/j0UymYYu4D0w=
-github.com/go-gandi/go-gandi v0.5.0/go.mod h1:9NoYyfWCjFosClPiWjkbbRK5UViaZ4ctpT8/pKSSFlw=
-github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0 h1:H6z9FZXySHpF+Dj5NfXrT8lCu5L/cH/+qRgLtyu991A=
-github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0/go.mod h1:vBoPKv7LLiP9Df3YcSlaMLs72gRGmoU8JYcevGXFF/o=
+github.com/go-gandi/go-gandi v0.7.0 h1:gsP33dUspsN1M+ZW9HEgHchK9HiaSkYnltO73RHhSZA=
+github.com/go-gandi/go-gandi v0.7.0/go.mod h1:9NoYyfWCjFosClPiWjkbbRK5UViaZ4ctpT8/pKSSFlw=
+github.com/go-gandi/terraform-provider-gandi/v2 v2.3.0 h1:kwDRy+OKF+/Ycyb2NbhX1FLCVay+JFv2PV5fqK0H8js=
+github.com/go-gandi/terraform-provider-gandi/v2 v2.3.0/go.mod h1:g+c15/wBK+TBacyzFq17+HM51vdPzoSr2rz/rFGv6K4=
 github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 h1:+zs/tPmkDkHx3U66DAb0lQFJrpS6731Oaa12ikc+DiI=
 github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376/go.mod h1:an3vInlBmSxCcxctByoQdvwPiA7DTK7jaaFDBTtu0ic=
 github.com/go-git/go-billy/v5 v5.4.1/go.mod h1:vjbugF6Fz7JIflbVpl1hJsGjSHNltrSw45YK/ukIvQg=

@@ -5,7 +5,7 @@ go 1.23.11
 replace github.com/hashicorp/terraform-plugin-sdk/v2 => github.com/pulumi/terraform-plugin-sdk/v2 v2.0.0-20250530111747-935112552988
 
 require (
-	github.com/go-gandi/terraform-provider-gandi/v2 v2.2.0
+	github.com/go-gandi/terraform-provider-gandi/v2 v2.3.0
 	github.com/pulumi/pulumi-terraform-bridge/v3 v3.114.0
 )
 
@@ -47,7 +47,7 @@ require (
 	github.com/ettle/strcase v0.1.1 // indirect
 	github.com/fatih/color v1.16.0 // indirect
 	github.com/felixge/httpsnoop v1.0.4 // indirect
-	github.com/go-gandi/go-gandi v0.5.0 // indirect
+	github.com/go-gandi/go-gandi v0.7.0 // indirect
 	github.com/go-git/gcfg v1.5.1-0.20230307220236-3a3c6141e376 // indirect
 	github.com/go-git/go-billy/v5 v5.6.2 // indirect
 	github.com/go-git/go-git/v5 v5.16.0 // indirect
