@@ -94,7 +94,7 @@ namespace Pulumi.Gandi
         /// <summary>
         /// (DEPRECATED) A Gandi API key
         /// </summary>
-        [Obsolete(@"use personal_access_token instead")]
+        [Obsolete(@"use PersonalAccessToken instead")]
         public Input<string>? Key
         {
             get => _key;
