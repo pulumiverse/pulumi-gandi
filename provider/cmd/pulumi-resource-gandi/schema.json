@@ -63,7 +63,7 @@
                         "GANDI_KEY"
                     ]
                 },
-                "deprecationMessage": "use personal_access_token instead",
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead",
                 "secret": true
             },
             "personalAccessToken": {
@@ -74,7 +74,7 @@
             "sharingId": {
                 "type": "string",
                 "description": "(DEPRECATED) A Gandi Sharing ID",
-                "deprecationMessage": "use personal_access_token instead"
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead"
             },
             "url": {
                 "type": "string",
@@ -394,7 +394,7 @@
             "key": {
                 "type": "string",
                 "description": "(DEPRECATED) A Gandi API key",
-                "deprecationMessage": "use personal_access_token instead",
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead",
                 "secret": true
             },
             "personalAccessToken": {
@@ -405,7 +405,7 @@
             "sharingId": {
                 "type": "string",
                 "description": "(DEPRECATED) A Gandi Sharing ID",
-                "deprecationMessage": "use personal_access_token instead"
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead"
             },
             "url": {
                 "type": "string",
@@ -425,7 +425,7 @@
                         "GANDI_KEY"
                     ]
                 },
-                "deprecationMessage": "use personal_access_token instead",
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead",
                 "secret": true
             },
             "personalAccessToken": {
@@ -436,7 +436,7 @@
             "sharingId": {
                 "type": "string",
                 "description": "(DEPRECATED) A Gandi Sharing ID",
-                "deprecationMessage": "use personal_access_token instead"
+                "deprecationMessage": "use\u003cspan pulumi-lang-nodejs=\" personalAccessToken \" pulumi-lang-dotnet=\" PersonalAccessToken \" pulumi-lang-go=\" personalAccessToken \" pulumi-lang-python=\" personal_access_token \" pulumi-lang-yaml=\" personalAccessToken \" pulumi-lang-java=\" personalAccessToken \"\u003e personal_access_token \u003c/span\u003einstead"
             },
             "url": {
                 "type": "string",

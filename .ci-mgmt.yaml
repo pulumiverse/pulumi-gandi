@@ -4,18 +4,8 @@ organization: pulumiverse
 providerDefaultBranch: main
 upstreamProviderOrg: gandi
 pulumiConvert: 1
-languages:
-  - dotnet
-  - go
-  - nodejs
-  - python
 publish:
-  sdk: "all,!java"
-  cdn: false
-plugins:
-  - name: terraform
-    version: "1.0.19"
-    kind: converter
+    cdn: false
 registryDocs: true
 publishRegistry: false
 goBuildParallelism: 2

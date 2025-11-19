@@ -21,22 +21,12 @@ size = 13591225
 url = "https://github.com/pulumi/schema-tools/releases/download/v0.6.0/schema-tools-v0.6.0-darwin-arm64.tar.gz"
 
 [[tools.go]]
-version = "1.23.11"
+version = "1.24.7"
 backend = "core:go"
 
-[tools.go.platforms.macos-arm64]
-checksum = "sha256:d3c2c69a79eb3e2a06e5d8bbca692c9166b27421f7251ccbafcada0ba35a05ee"
-size = 71665541
-url = "https://dl.google.com/go/go1.23.11.darwin-arm64.tar.gz"
-
 [[tools.golangci-lint]]
-version = "1.64.8"
+version = "2.6.2"
 backend = "aqua:golangci/golangci-lint"
-
-[tools.golangci-lint.platforms.linux-x64]
-checksum = "sha256:b6270687afb143d019f387c791cd2a6f1cb383be9b3124d241ca11bd3ce2e54e"
-size = 12364828
-url = "https://github.com/golangci/golangci-lint/releases/download/v1.64.8/golangci-lint-1.64.8-linux-amd64.tar.gz"
 
 [[tools.gradle]]
 version = "7.6.6"
@@ -48,13 +38,13 @@ size = 128439774
 url = "https://github.com/gradle/gradle-distributions/releases/download/v7.6.6/gradle-7.6.6-bin.zip"
 
 [[tools.java]]
-version = "corretto-11.0.28.6.1"
+version = "corretto-11.0.29.7.1"
 backend = "core:java"
 
 [tools.java.platforms.macos-arm64]
-checksum = "sha256:5fd69f12b4c961ed2fce17e29c1475f9a7b667cff0fe0a8ba26eb154ee0ede74"
-size = 185512031
-url = "https://corretto.aws/downloads/resources/11.0.28.6.1/amazon-corretto-11.0.28.6.1-macosx-aarch64.tar.gz"
+checksum = "sha256:3fcf93300022d20f6a460221cba0a4c7337679b777699409f2db4d20ae9b69b5"
+size = 185375727
+url = "https://corretto.aws/downloads/resources/11.0.29.7.1/amazon-corretto-11.0.29.7.1-macosx-aarch64.tar.gz"
 
 [[tools.node]]
 version = "20.19.5"
@@ -70,9 +60,13 @@ version = "1.22.22"
 backend = "npm:yarn"
 
 [[tools.pulumi]]
-version = "3.190.0"
+version = "3.207.0"
 backend = "aqua:pulumi/pulumi"
 
 [[tools.python]]
 version = "3.11.8"
 backend = "core:python"
+
+[[tools."vfox-pulumi:pulumi/pulumi-converter-terraform"]]
+version = "1.2.4"
+backend = "vfox-pulumi:pulumi/pulumi-converter-terraform"
