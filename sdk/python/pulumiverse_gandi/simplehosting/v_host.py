@@ -25,6 +25,7 @@ class VHostArgs:
                  linked_dns_zone_alteration: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         The set of arguments for constructing a VHost resource.
+
         :param pulumi.Input[_builtins.str] fqdn: The FQDN of the Vhost
         :param pulumi.Input[_builtins.str] instance_id: The ID of the SimpleHosting instance
         :param pulumi.Input[_builtins.str] application: The name of an application to install ('grav', 'matomo', 'nextcloud', 'prestashop', 'wordpress')
@@ -96,6 +97,7 @@ class _VHostState:
                  linked_dns_zone_alteration: Optional[pulumi.Input[_builtins.bool]] = None):
         """
         Input properties used for looking up and filtering VHost resources.
+
         :param pulumi.Input[_builtins.str] application: The name of an application to install ('grav', 'matomo', 'nextcloud', 'prestashop', 'wordpress')
         :param pulumi.Input[_builtins.str] certificate_id: The ID of the created free certificate
         :param pulumi.Input[_builtins.str] fqdn: The FQDN of the Vhost
@@ -187,6 +189,7 @@ class VHost(pulumi.CustomResource):
                  __props__=None):
         """
         Create a VHost resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] application: The name of an application to install ('grav', 'matomo', 'nextcloud', 'prestashop', 'wordpress')
@@ -202,6 +205,7 @@ class VHost(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a VHost resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param VHostArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

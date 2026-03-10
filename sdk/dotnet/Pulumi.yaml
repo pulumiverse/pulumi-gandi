@@ -1,0 +1,3 @@
+name: gandi
+description: A Pulumi resource provider for gandi.
+language: dotnet

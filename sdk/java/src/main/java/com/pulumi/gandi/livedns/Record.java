@@ -33,9 +33,17 @@ public class Record extends com.pulumi.resources.CustomResource {
     public Output<String> href() {
         return this.href;
     }
+    /**
+     * Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     * 
+     */
     @Export(name="mutable", refs={Boolean.class}, tree="[0]")
     private Output</* @Nullable */ Boolean> mutable;
 
+    /**
+     * @return Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     * 
+     */
     public Output<Optional<Boolean>> mutable() {
         return Codegen.optional(this.mutable);
     }

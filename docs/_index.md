@@ -41,12 +41,14 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```typescript
 import * as pulumi from "@pulumi/pulumi";
 import * as gandi from "@pulumiverse/gandi";
 
 const exampleCom = new gandi.domains.Domain("example_com", {name: "example.com"});
 ```
+
 {{% /choosable %}}
 {{% choosable language python %}}
 ```yaml
@@ -58,12 +60,14 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```python
 import pulumi
 import pulumiverse_gandi as gandi
 
 example_com = gandi.domains.Domain("example_com", name="example.com")
 ```
+
 {{% /choosable %}}
 {{% choosable language csharp %}}
 ```yaml
@@ -75,6 +79,7 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```csharp
 using System.Collections.Generic;
 using System.Linq;
@@ -91,6 +96,7 @@ return await Deployment.RunAsync(() =>
 });
 
 ```
+
 {{% /choosable %}}
 {{% choosable language go %}}
 ```yaml
@@ -102,6 +108,7 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```go
 package main
 
@@ -122,6 +129,7 @@ func main() {
 	})
 }
 ```
+
 {{% /choosable %}}
 {{% choosable language yaml %}}
 ```yaml
@@ -133,6 +141,7 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```yaml
 resources:
   exampleCom:
@@ -141,6 +150,7 @@ resources:
     properties:
       name: example.com
 ```
+
 {{% /choosable %}}
 {{% choosable language java %}}
 ```yaml
@@ -152,6 +162,7 @@ config:
         value: MY_PERSONAL_ACCESS_TOKEN
 
 ```
+
 ```java
 package generated_program;
 
@@ -180,6 +191,7 @@ public class App {
     }
 }
 ```
+
 {{% /choosable %}}
 {{< /chooser >}}
 ## Authentication

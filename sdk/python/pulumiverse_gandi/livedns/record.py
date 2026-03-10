@@ -27,10 +27,12 @@ class RecordArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Record resource.
+
         :param pulumi.Input[_builtins.int] ttl: The TTL of the record
         :param pulumi.Input[_builtins.str] type: The type of the record
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] values: A list of values of the record
         :param pulumi.Input[_builtins.str] zone: The FQDN of the domain
+        :param pulumi.Input[_builtins.bool] mutable: Define if the record can be modified outside Terraform (this currently only works for TXT records)
         :param pulumi.Input[_builtins.str] name: The name of the record
         """
         pulumi.set(__self__, "ttl", ttl)
@@ -93,6 +95,9 @@ class RecordArgs:
     @_builtins.property
     @pulumi.getter
     def mutable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        """
         return pulumi.get(self, "mutable")
 
     @mutable.setter
@@ -124,7 +129,9 @@ class _RecordState:
                  zone: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Record resources.
+
         :param pulumi.Input[_builtins.str] href: The href of the record
+        :param pulumi.Input[_builtins.bool] mutable: Define if the record can be modified outside Terraform (this currently only works for TXT records)
         :param pulumi.Input[_builtins.str] name: The name of the record
         :param pulumi.Input[_builtins.int] ttl: The TTL of the record
         :param pulumi.Input[_builtins.str] type: The type of the record
@@ -161,6 +168,9 @@ class _RecordState:
     @_builtins.property
     @pulumi.getter
     def mutable(self) -> Optional[pulumi.Input[_builtins.bool]]:
+        """
+        Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        """
         return pulumi.get(self, "mutable")
 
     @mutable.setter
@@ -243,8 +253,10 @@ class Record(pulumi.CustomResource):
                  __props__=None):
         """
         Create a Record resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
+        :param pulumi.Input[_builtins.bool] mutable: Define if the record can be modified outside Terraform (this currently only works for TXT records)
         :param pulumi.Input[_builtins.str] name: The name of the record
         :param pulumi.Input[_builtins.int] ttl: The TTL of the record
         :param pulumi.Input[_builtins.str] type: The type of the record
@@ -259,6 +271,7 @@ class Record(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a Record resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param RecordArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
@@ -329,6 +342,7 @@ class Record(pulumi.CustomResource):
         :param pulumi.Input[str] id: The unique provider ID of the resource to lookup.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] href: The href of the record
+        :param pulumi.Input[_builtins.bool] mutable: Define if the record can be modified outside Terraform (this currently only works for TXT records)
         :param pulumi.Input[_builtins.str] name: The name of the record
         :param pulumi.Input[_builtins.int] ttl: The TTL of the record
         :param pulumi.Input[_builtins.str] type: The type of the record
@@ -359,6 +373,9 @@ class Record(pulumi.CustomResource):
     @_builtins.property
     @pulumi.getter
     def mutable(self) -> pulumi.Output[Optional[_builtins.bool]]:
+        """
+        Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        """
         return pulumi.get(self, "mutable")
 
     @_builtins.property

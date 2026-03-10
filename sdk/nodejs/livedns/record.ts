@@ -36,6 +36,9 @@ export class Record extends pulumi.CustomResource {
      * The href of the record
      */
     declare public /*out*/ readonly href: pulumi.Output<string>;
+    /**
+     * Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     */
     declare public readonly mutable: pulumi.Output<boolean | undefined>;
     /**
      * The name of the record
@@ -113,6 +116,9 @@ export interface RecordState {
      * The href of the record
      */
     href?: pulumi.Input<string>;
+    /**
+     * Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     */
     mutable?: pulumi.Input<boolean>;
     /**
      * The name of the record
@@ -140,6 +146,9 @@ export interface RecordState {
  * The set of arguments for constructing a Record resource.
  */
 export interface RecordArgs {
+    /**
+     * Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     */
     mutable?: pulumi.Input<boolean>;
     /**
      * The name of the record
