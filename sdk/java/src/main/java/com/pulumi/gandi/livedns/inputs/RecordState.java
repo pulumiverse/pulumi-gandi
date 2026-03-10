@@ -33,9 +33,17 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
         return Optional.ofNullable(this.href);
     }
 
+    /**
+     * Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     * 
+     */
     @Import(name="mutable")
     private @Nullable Output<Boolean> mutable;
 
+    /**
+     * @return Define if the record can be modified outside Terraform (this currently only works for TXT records)
+     * 
+     */
     public Optional<Output<Boolean>> mutable() {
         return Optional.ofNullable(this.mutable);
     }
@@ -166,11 +174,23 @@ public final class RecordState extends com.pulumi.resources.ResourceArgs {
             return href(Output.of(href));
         }
 
+        /**
+         * @param mutable Define if the record can be modified outside Terraform (this currently only works for TXT records)
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutable(@Nullable Output<Boolean> mutable) {
             $.mutable = mutable;
             return this;
         }
 
+        /**
+         * @param mutable Define if the record can be modified outside Terraform (this currently only works for TXT records)
+         * 
+         * @return builder
+         * 
+         */
         public Builder mutable(Boolean mutable) {
             return mutable(Output.of(mutable));
         }

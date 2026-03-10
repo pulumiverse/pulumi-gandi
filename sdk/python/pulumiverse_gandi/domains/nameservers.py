@@ -23,6 +23,7 @@ class NameserversArgs:
                  nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         The set of arguments for constructing a Nameservers resource.
+
         :param pulumi.Input[_builtins.str] domain: The FQDN of the domain
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nameservers: A list of nameservers for the domain
         """
@@ -62,6 +63,7 @@ class _NameserversState:
                  nameservers: Optional[pulumi.Input[Sequence[pulumi.Input[_builtins.str]]]] = None):
         """
         Input properties used for looking up and filtering Nameservers resources.
+
         :param pulumi.Input[_builtins.str] domain: The FQDN of the domain
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nameservers: A list of nameservers for the domain
         """
@@ -106,6 +108,7 @@ class Nameservers(pulumi.CustomResource):
                  __props__=None):
         """
         Create a Nameservers resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] domain: The FQDN of the domain
@@ -119,6 +122,7 @@ class Nameservers(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a Nameservers resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param NameserversArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

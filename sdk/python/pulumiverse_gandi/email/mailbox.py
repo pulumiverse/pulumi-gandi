@@ -26,6 +26,7 @@ class MailboxArgs:
                  mailbox_type: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Mailbox resource.
+
         :param pulumi.Input[_builtins.str] domain: Domain name
         :param pulumi.Input[_builtins.str] login: Login
         :param pulumi.Input[_builtins.str] password: Password
@@ -111,6 +112,7 @@ class _MailboxState:
                  password: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Mailbox resources.
+
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] aliases: Aliases for email
         :param pulumi.Input[_builtins.str] domain: Domain name
         :param pulumi.Input[_builtins.str] login: Login
@@ -203,6 +205,7 @@ class Mailbox(pulumi.CustomResource):
                  __props__=None):
         """
         Create a Mailbox resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] aliases: Aliases for email
@@ -219,6 +222,7 @@ class Mailbox(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a Mailbox resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param MailboxArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

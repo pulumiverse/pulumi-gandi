@@ -25,68 +25,63 @@ __all__ = [
     'DomainTechArgsDict',
 ]
 
-MYPY = False
-
-if not MYPY:
-    class DomainAdminArgsDict(TypedDict):
-        city: pulumi.Input[_builtins.str]
-        """
-        City for the contact
-        """
-        country: pulumi.Input[_builtins.str]
-        """
-        The two letter country code for the contact
-        """
-        email: pulumi.Input[_builtins.str]
-        """
-        Contact email address
-        """
-        family_name: pulumi.Input[_builtins.str]
-        """
-        Family name of the contact
-        """
-        given_name: pulumi.Input[_builtins.str]
-        """
-        Given name of the contact
-        """
-        phone: pulumi.Input[_builtins.str]
-        """
-        Phone number for the contact
-        """
-        street_addr: pulumi.Input[_builtins.str]
-        """
-        Street Address of the contact
-        """
-        type: pulumi.Input[_builtins.str]
-        """
-        One of 'person', 'company', 'association', 'public body', or 'reseller'
-        """
-        zip: pulumi.Input[_builtins.str]
-        """
-        Postal Code/Zipcode of the contact
-        """
-        data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact data in WHOIS
-        """
-        extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
-        """
-        Extra parameters, needed for some jurisdictions
-        """
-        mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact email in WHOIS
-        """
-        organisation: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The legal name of the organisation. Required for types other than person
-        """
-        state: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The state code for the contact
-        """
-elif False:
-    DomainAdminArgsDict: TypeAlias = Mapping[str, Any]
+class DomainAdminArgsDict(TypedDict):
+    city: pulumi.Input[_builtins.str]
+    """
+    City for the contact
+    """
+    country: pulumi.Input[_builtins.str]
+    """
+    The two letter country code for the contact
+    """
+    email: pulumi.Input[_builtins.str]
+    """
+    Contact email address
+    """
+    family_name: pulumi.Input[_builtins.str]
+    """
+    Family name of the contact
+    """
+    given_name: pulumi.Input[_builtins.str]
+    """
+    Given name of the contact
+    """
+    phone: pulumi.Input[_builtins.str]
+    """
+    Phone number for the contact
+    """
+    street_addr: pulumi.Input[_builtins.str]
+    """
+    Street Address of the contact
+    """
+    type: pulumi.Input[_builtins.str]
+    """
+    One of 'person', 'company', 'association', 'public body', or 'reseller'
+    """
+    zip: pulumi.Input[_builtins.str]
+    """
+    Postal Code/Zipcode of the contact
+    """
+    data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact data in WHOIS
+    """
+    extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
+    """
+    Extra parameters, needed for some jurisdictions
+    """
+    mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact email in WHOIS
+    """
+    organisation: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The legal name of the organisation. Required for types other than person
+    """
+    state: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The state code for the contact
+    """
 
 @pulumi.input_type
 class DomainAdminArgs:
@@ -310,66 +305,63 @@ class DomainAdminArgs:
         pulumi.set(self, "state", value)
 
 
-if not MYPY:
-    class DomainBillingArgsDict(TypedDict):
-        city: pulumi.Input[_builtins.str]
-        """
-        City for the contact
-        """
-        country: pulumi.Input[_builtins.str]
-        """
-        The two letter country code for the contact
-        """
-        email: pulumi.Input[_builtins.str]
-        """
-        Contact email address
-        """
-        family_name: pulumi.Input[_builtins.str]
-        """
-        Family name of the contact
-        """
-        given_name: pulumi.Input[_builtins.str]
-        """
-        Given name of the contact
-        """
-        phone: pulumi.Input[_builtins.str]
-        """
-        Phone number for the contact
-        """
-        street_addr: pulumi.Input[_builtins.str]
-        """
-        Street Address of the contact
-        """
-        type: pulumi.Input[_builtins.str]
-        """
-        One of 'person', 'company', 'association', 'public body', or 'reseller'
-        """
-        zip: pulumi.Input[_builtins.str]
-        """
-        Postal Code/Zipcode of the contact
-        """
-        data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact data in WHOIS
-        """
-        extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
-        """
-        Extra parameters, needed for some jurisdictions
-        """
-        mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact email in WHOIS
-        """
-        organisation: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The legal name of the organisation. Required for types other than person
-        """
-        state: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The state code for the contact
-        """
-elif False:
-    DomainBillingArgsDict: TypeAlias = Mapping[str, Any]
+class DomainBillingArgsDict(TypedDict):
+    city: pulumi.Input[_builtins.str]
+    """
+    City for the contact
+    """
+    country: pulumi.Input[_builtins.str]
+    """
+    The two letter country code for the contact
+    """
+    email: pulumi.Input[_builtins.str]
+    """
+    Contact email address
+    """
+    family_name: pulumi.Input[_builtins.str]
+    """
+    Family name of the contact
+    """
+    given_name: pulumi.Input[_builtins.str]
+    """
+    Given name of the contact
+    """
+    phone: pulumi.Input[_builtins.str]
+    """
+    Phone number for the contact
+    """
+    street_addr: pulumi.Input[_builtins.str]
+    """
+    Street Address of the contact
+    """
+    type: pulumi.Input[_builtins.str]
+    """
+    One of 'person', 'company', 'association', 'public body', or 'reseller'
+    """
+    zip: pulumi.Input[_builtins.str]
+    """
+    Postal Code/Zipcode of the contact
+    """
+    data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact data in WHOIS
+    """
+    extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
+    """
+    Extra parameters, needed for some jurisdictions
+    """
+    mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact email in WHOIS
+    """
+    organisation: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The legal name of the organisation. Required for types other than person
+    """
+    state: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The state code for the contact
+    """
 
 @pulumi.input_type
 class DomainBillingArgs:
@@ -593,66 +585,63 @@ class DomainBillingArgs:
         pulumi.set(self, "state", value)
 
 
-if not MYPY:
-    class DomainOwnerArgsDict(TypedDict):
-        city: pulumi.Input[_builtins.str]
-        """
-        City for the contact
-        """
-        country: pulumi.Input[_builtins.str]
-        """
-        The two letter country code for the contact
-        """
-        email: pulumi.Input[_builtins.str]
-        """
-        Contact email address
-        """
-        family_name: pulumi.Input[_builtins.str]
-        """
-        Family name of the contact
-        """
-        given_name: pulumi.Input[_builtins.str]
-        """
-        Given name of the contact
-        """
-        phone: pulumi.Input[_builtins.str]
-        """
-        Phone number for the contact
-        """
-        street_addr: pulumi.Input[_builtins.str]
-        """
-        Street Address of the contact
-        """
-        type: pulumi.Input[_builtins.str]
-        """
-        One of 'person', 'company', 'association', 'public body', or 'reseller'
-        """
-        zip: pulumi.Input[_builtins.str]
-        """
-        Postal Code/Zipcode of the contact
-        """
-        data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact data in WHOIS
-        """
-        extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
-        """
-        Extra parameters, needed for some jurisdictions
-        """
-        mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact email in WHOIS
-        """
-        organisation: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The legal name of the organisation. Required for types other than person
-        """
-        state: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The state code for the contact
-        """
-elif False:
-    DomainOwnerArgsDict: TypeAlias = Mapping[str, Any]
+class DomainOwnerArgsDict(TypedDict):
+    city: pulumi.Input[_builtins.str]
+    """
+    City for the contact
+    """
+    country: pulumi.Input[_builtins.str]
+    """
+    The two letter country code for the contact
+    """
+    email: pulumi.Input[_builtins.str]
+    """
+    Contact email address
+    """
+    family_name: pulumi.Input[_builtins.str]
+    """
+    Family name of the contact
+    """
+    given_name: pulumi.Input[_builtins.str]
+    """
+    Given name of the contact
+    """
+    phone: pulumi.Input[_builtins.str]
+    """
+    Phone number for the contact
+    """
+    street_addr: pulumi.Input[_builtins.str]
+    """
+    Street Address of the contact
+    """
+    type: pulumi.Input[_builtins.str]
+    """
+    One of 'person', 'company', 'association', 'public body', or 'reseller'
+    """
+    zip: pulumi.Input[_builtins.str]
+    """
+    Postal Code/Zipcode of the contact
+    """
+    data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact data in WHOIS
+    """
+    extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
+    """
+    Extra parameters, needed for some jurisdictions
+    """
+    mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact email in WHOIS
+    """
+    organisation: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The legal name of the organisation. Required for types other than person
+    """
+    state: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The state code for the contact
+    """
 
 @pulumi.input_type
 class DomainOwnerArgs:
@@ -876,66 +865,63 @@ class DomainOwnerArgs:
         pulumi.set(self, "state", value)
 
 
-if not MYPY:
-    class DomainTechArgsDict(TypedDict):
-        city: pulumi.Input[_builtins.str]
-        """
-        City for the contact
-        """
-        country: pulumi.Input[_builtins.str]
-        """
-        The two letter country code for the contact
-        """
-        email: pulumi.Input[_builtins.str]
-        """
-        Contact email address
-        """
-        family_name: pulumi.Input[_builtins.str]
-        """
-        Family name of the contact
-        """
-        given_name: pulumi.Input[_builtins.str]
-        """
-        Given name of the contact
-        """
-        phone: pulumi.Input[_builtins.str]
-        """
-        Phone number for the contact
-        """
-        street_addr: pulumi.Input[_builtins.str]
-        """
-        Street Address of the contact
-        """
-        type: pulumi.Input[_builtins.str]
-        """
-        One of 'person', 'company', 'association', 'public body', or 'reseller'
-        """
-        zip: pulumi.Input[_builtins.str]
-        """
-        Postal Code/Zipcode of the contact
-        """
-        data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact data in WHOIS
-        """
-        extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
-        """
-        Extra parameters, needed for some jurisdictions
-        """
-        mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
-        """
-        Whether or not to obfuscate contact email in WHOIS
-        """
-        organisation: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The legal name of the organisation. Required for types other than person
-        """
-        state: NotRequired[pulumi.Input[_builtins.str]]
-        """
-        The state code for the contact
-        """
-elif False:
-    DomainTechArgsDict: TypeAlias = Mapping[str, Any]
+class DomainTechArgsDict(TypedDict):
+    city: pulumi.Input[_builtins.str]
+    """
+    City for the contact
+    """
+    country: pulumi.Input[_builtins.str]
+    """
+    The two letter country code for the contact
+    """
+    email: pulumi.Input[_builtins.str]
+    """
+    Contact email address
+    """
+    family_name: pulumi.Input[_builtins.str]
+    """
+    Family name of the contact
+    """
+    given_name: pulumi.Input[_builtins.str]
+    """
+    Given name of the contact
+    """
+    phone: pulumi.Input[_builtins.str]
+    """
+    Phone number for the contact
+    """
+    street_addr: pulumi.Input[_builtins.str]
+    """
+    Street Address of the contact
+    """
+    type: pulumi.Input[_builtins.str]
+    """
+    One of 'person', 'company', 'association', 'public body', or 'reseller'
+    """
+    zip: pulumi.Input[_builtins.str]
+    """
+    Postal Code/Zipcode of the contact
+    """
+    data_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact data in WHOIS
+    """
+    extra_parameters: NotRequired[pulumi.Input[Mapping[str, pulumi.Input[_builtins.str]]]]
+    """
+    Extra parameters, needed for some jurisdictions
+    """
+    mail_obfuscated: NotRequired[pulumi.Input[_builtins.bool]]
+    """
+    Whether or not to obfuscate contact email in WHOIS
+    """
+    organisation: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The legal name of the organisation. Required for types other than person
+    """
+    state: NotRequired[pulumi.Input[_builtins.str]]
+    """
+    The state code for the contact
+    """
 
 @pulumi.input_type
 class DomainTechArgs:

@@ -16,7 +16,8 @@ type Record struct {
 	pulumi.CustomResourceState
 
 	// The href of the record
-	Href    pulumi.StringOutput  `pulumi:"href"`
+	Href pulumi.StringOutput `pulumi:"href"`
+	// Define if the record can be modified outside Terraform (this currently only works for TXT records)
 	Mutable pulumi.BoolPtrOutput `pulumi:"mutable"`
 	// The name of the record
 	Name pulumi.StringOutput `pulumi:"name"`
@@ -73,8 +74,9 @@ func GetRecord(ctx *pulumi.Context,
 // Input properties used for looking up and filtering Record resources.
 type recordState struct {
 	// The href of the record
-	Href    *string `pulumi:"href"`
-	Mutable *bool   `pulumi:"mutable"`
+	Href *string `pulumi:"href"`
+	// Define if the record can be modified outside Terraform (this currently only works for TXT records)
+	Mutable *bool `pulumi:"mutable"`
 	// The name of the record
 	Name *string `pulumi:"name"`
 	// The TTL of the record
@@ -89,7 +91,8 @@ type recordState struct {
 
 type RecordState struct {
 	// The href of the record
-	Href    pulumi.StringPtrInput
+	Href pulumi.StringPtrInput
+	// Define if the record can be modified outside Terraform (this currently only works for TXT records)
 	Mutable pulumi.BoolPtrInput
 	// The name of the record
 	Name pulumi.StringPtrInput
@@ -108,6 +111,7 @@ func (RecordState) ElementType() reflect.Type {
 }
 
 type recordArgs struct {
+	// Define if the record can be modified outside Terraform (this currently only works for TXT records)
 	Mutable *bool `pulumi:"mutable"`
 	// The name of the record
 	Name *string `pulumi:"name"`
@@ -123,6 +127,7 @@ type recordArgs struct {
 
 // The set of arguments for constructing a Record resource.
 type RecordArgs struct {
+	// Define if the record can be modified outside Terraform (this currently only works for TXT records)
 	Mutable pulumi.BoolPtrInput
 	// The name of the record
 	Name pulumi.StringPtrInput
@@ -228,6 +233,7 @@ func (o RecordOutput) Href() pulumi.StringOutput {
 	return o.ApplyT(func(v *Record) pulumi.StringOutput { return v.Href }).(pulumi.StringOutput)
 }
 
+// Define if the record can be modified outside Terraform (this currently only works for TXT records)
 func (o RecordOutput) Mutable() pulumi.BoolPtrOutput {
 	return o.ApplyT(func(v *Record) pulumi.BoolPtrOutput { return v.Mutable }).(pulumi.BoolPtrOutput)
 }

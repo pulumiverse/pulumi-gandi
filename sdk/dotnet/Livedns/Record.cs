@@ -18,6 +18,9 @@ namespace Pulumi.Gandi.Livedns
         [Output("href")]
         public Output<string> Href { get; private set; } = null!;
 
+        /// <summary>
+        /// Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        /// </summary>
         [Output("mutable")]
         public Output<bool?> Mutable { get; private set; } = null!;
 
@@ -98,6 +101,9 @@ namespace Pulumi.Gandi.Livedns
 
     public sealed class RecordArgs : global::Pulumi.ResourceArgs
     {
+        /// <summary>
+        /// Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        /// </summary>
         [Input("mutable")]
         public Input<bool>? Mutable { get; set; }
 
@@ -151,6 +157,9 @@ namespace Pulumi.Gandi.Livedns
         [Input("href")]
         public Input<string>? Href { get; set; }
 
+        /// <summary>
+        /// Define if the record can be modified outside Terraform (this currently only works for TXT records)
+        /// </summary>
         [Input("mutable")]
         public Input<bool>? Mutable { get; set; }
 

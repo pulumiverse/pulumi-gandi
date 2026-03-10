@@ -31,6 +31,7 @@ class DomainArgs:
                  tech: Optional[pulumi.Input['DomainTechArgs']] = None):
         """
         The set of arguments for constructing a Domain resource.
+
         :param pulumi.Input[_builtins.bool] autorenew: Should the domain autorenew
         :param pulumi.Input[_builtins.str] name: The FQDN of the domain
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nameservers: A list of nameservers for the domain
@@ -157,6 +158,7 @@ class _DomainState:
                  tech: Optional[pulumi.Input['DomainTechArgs']] = None):
         """
         Input properties used for looking up and filtering Domain resources.
+
         :param pulumi.Input[_builtins.bool] autorenew: Should the domain autorenew
         :param pulumi.Input[_builtins.str] name: The FQDN of the domain
         :param pulumi.Input[Sequence[pulumi.Input[_builtins.str]]] nameservers: A list of nameservers for the domain
@@ -288,6 +290,7 @@ class Domain(pulumi.CustomResource):
                  __props__=None):
         """
         Create a Domain resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.bool] autorenew: Should the domain autorenew
@@ -303,6 +306,7 @@ class Domain(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a Domain resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param DomainArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.

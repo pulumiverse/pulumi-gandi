@@ -26,6 +26,7 @@ class InstanceArgs:
                  name: Optional[pulumi.Input[_builtins.str]] = None):
         """
         The set of arguments for constructing a Instance resource.
+
         :param pulumi.Input[_builtins.str] database_name: The name of the database type ('mysql' or 'pgsql')
         :param pulumi.Input[_builtins.str] language_name: The name of the language ('php', 'python', 'nodejs' or 'ruby')
         :param pulumi.Input[_builtins.str] location: The datacenter location of the instance ('FR' or 'LU')
@@ -110,6 +111,7 @@ class _InstanceState:
                  size: Optional[pulumi.Input[_builtins.str]] = None):
         """
         Input properties used for looking up and filtering Instance resources.
+
         :param pulumi.Input[_builtins.str] database_name: The name of the database type ('mysql' or 'pgsql')
         :param pulumi.Input[_builtins.str] language_name: The name of the language ('php', 'python', 'nodejs' or 'ruby')
         :param pulumi.Input[_builtins.str] location: The datacenter location of the instance ('FR' or 'LU')
@@ -202,6 +204,7 @@ class Instance(pulumi.CustomResource):
                  __props__=None):
         """
         Create a Instance resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param pulumi.ResourceOptions opts: Options for the resource.
         :param pulumi.Input[_builtins.str] database_name: The name of the database type ('mysql' or 'pgsql')
@@ -218,6 +221,7 @@ class Instance(pulumi.CustomResource):
                  opts: Optional[pulumi.ResourceOptions] = None):
         """
         Create a Instance resource with the given unique name, props, and options.
+
         :param str resource_name: The name of the resource.
         :param InstanceArgs args: The arguments to use to populate this resource's properties.
         :param pulumi.ResourceOptions opts: Options for the resource.
