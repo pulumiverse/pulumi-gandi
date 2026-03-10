@@ -1030,7 +1030,8 @@
                     "description": "The href of the record\n"
                 },
                 "mutable": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
                 },
                 "name": {
                     "type": "string",
@@ -1066,7 +1067,8 @@
             ],
             "inputProperties": {
                 "mutable": {
-                    "type": "boolean"
+                    "type": "boolean",
+                    "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
                 },
                 "name": {
                     "type": "string",
@@ -1109,7 +1111,8 @@
                         "description": "The href of the record\n"
                     },
                     "mutable": {
-                        "type": "boolean"
+                        "type": "boolean",
+                        "description": "Define if the record can be modified outside Terraform (this currently only works for TXT records)\n"
                     },
                     "name": {
                         "type": "string",

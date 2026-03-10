@@ -12,17 +12,24 @@ size = 26579429
 url = "https://github.com/pulumi/pulumictl/releases/download/v0.0.50/pulumictl-v0.0.50-darwin-arm64.tar.gz"
 
 [[tools."github:pulumi/schema-tools"]]
-version = "0.6.0"
+version = "0.7.0"
 backend = "github:pulumi/schema-tools"
 
-[tools."github:pulumi/schema-tools".platforms.macos-arm64]
-checksum = "blake3:741e51e8faf48d6dd0e1d156af8f73e1ff59b9ef4a3598165704af3a9985b8b7"
-size = 13591225
-url = "https://github.com/pulumi/schema-tools/releases/download/v0.6.0/schema-tools-v0.6.0-darwin-arm64.tar.gz"
+[tools."github:pulumi/schema-tools".platforms.linux-x64]
+checksum = "sha256:e81fc48cb4a88bd5820b99cfc7dab3ffee82a8e35e7d71048e9f0e91ff456581"
+name = "schema-tools-v0.7.0-linux-amd64.tar.gz"
+size = 20300562
+url = "https://github.com/pulumi/schema-tools/releases/download/v0.7.0/schema-tools-v0.7.0-linux-amd64.tar.gz"
+url_api = "https://api.github.com/repos/pulumi/schema-tools/releases/assets/367439699"
 
 [[tools.go]]
-version = "1.24.7"
+version = "1.25.6"
 backend = "core:go"
+
+[tools.go.platforms.linux-x64]
+checksum = "sha256:f022b6aad78e362bcba9b0b94d09ad58c5a70c6ba3b7582905fababf5fe0181a"
+size = 59768880
+url = "https://dl.google.com/go/go1.25.6.linux-amd64.tar.gz"
 
 [[tools.golangci-lint]]
 version = "2.6.2"
@@ -38,13 +45,13 @@ size = 128439774
 url = "https://github.com/gradle/gradle-distributions/releases/download/v7.6.6/gradle-7.6.6-bin.zip"
 
 [[tools.java]]
-version = "corretto-11.0.29.7.1"
+version = "corretto-11.0.30.7.1"
 backend = "core:java"
 
-[tools.java.platforms.macos-arm64]
-checksum = "sha256:3fcf93300022d20f6a460221cba0a4c7337679b777699409f2db4d20ae9b69b5"
-size = 185375727
-url = "https://corretto.aws/downloads/resources/11.0.29.7.1/amazon-corretto-11.0.29.7.1-macosx-aarch64.tar.gz"
+[tools.java.platforms.linux-x64]
+checksum = "sha256:c4843d67b7c8f5f8ffbab43b90b8595243f48aa545b713e30e1d29a5f23b364c"
+size = 195460057
+url = "https://corretto.aws/downloads/resources/11.0.30.7.1/amazon-corretto-11.0.30.7.1-linux-x64.tar.gz"
 
 [[tools.node]]
 version = "20.19.5"
@@ -60,8 +67,13 @@ version = "1.22.22"
 backend = "npm:yarn"
 
 [[tools.pulumi]]
-version = "3.207.0"
+version = "3.225.0"
 backend = "aqua:pulumi/pulumi"
+
+[tools.pulumi.platforms.linux-x64]
+checksum = "sha256:63d0cb6ed5a6c1d7c398d34f97759bc8538ca6e800adb829d993135d5a1d3aab"
+size = 100967848
+url = "https://github.com/pulumi/pulumi/releases/download/v3.225.0/pulumi-v3.225.0-linux-x64.tar.gz"
 
 [[tools.python]]
 version = "3.11.8"
